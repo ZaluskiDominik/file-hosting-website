@@ -1,0 +1,131 @@
+#whyUsSection
+{
+	padding: 10px;
+	padding-top: 20px;
+	background-image: url("../img/why_us_bcg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#whyUsSection > h1
+{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	text-shadow: 2px 2px 1px gray;
+	color: #333;
+}
+
+#whyUsSection > h2
+{
+	text-align: center;
+	margin: 0;
+	margin-bottom: 15px;
+	color: brown;
+	font-size: 34px;
+}
+
+#prosWrapper
+{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.prosRow
+{
+	display: flex;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.prosRow:not(:last-child)
+{
+	margin-bottom: 40px;
+}
+
+.prosRow:nth-child(odd)
+{
+	justify-content: flex-start;
+}
+
+.prosRow:nth-child(even)
+{
+	justify-content: flex-end;
+}
+
+.pros
+{
+	display: flex;
+	align-items: center;
+	width: 45%;
+	min-width: 350px !important;
+	color: white;
+	text-align: justify;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 190px;
+	background-color: #1e90ff;
+	box-sizing: content-box;
+	transition: padding 1s;
+}
+
+.prosRow:nth-child(odd) .pros
+{
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+	-moz-box-shadow: 2px 2px 5px 1px black;
+	-webkit-box-shadow: 2px 2px 5px 1px black;
+	box-shadow: 2px 2px 5px 1px black;
+}
+
+.prosRow:nth-child(even) .pros
+{
+	border-top-left-radius: 16px;
+	border-bottom-left-radius: 16px;
+	-moz-box-shadow: -2px 2px 5px 1px black;
+	-webkit-box-shadow: -2px 2px 5px 1px black;
+	box-shadow: -2px 2px 5px 1px black;
+}
+
+.prosGroup
+{
+	display: flex;
+	align-items: center;
+}
+
+.number
+{
+	display: flex;
+	align-items: center;
+	border-radius: 100%;
+	font-size: 54px;
+	font-weight: bold;
+	padding-left: 24px;
+	padding-right: 24px;
+	border: 8px solid lightgreen;
+}
+
+.prosRow:nth-child(odd) .pros:hover
+{
+	padding-right: 110px;
+}
+
+.prosRow:nth-child(even) .pros:hover
+{
+	padding-left: 110px;
+}
+
+.prosGroup
+{
+	transition: transform 1s;
+}
+
+.prosRow:nth-child(odd) .pros:hover > .prosGroup
+{
+	transform: translateX(100px);
+}
+
+
+.prosRow:nth-child(even) .pros:hover > .prosGroup
+{
+	transform: translateX(-100px);
+}
