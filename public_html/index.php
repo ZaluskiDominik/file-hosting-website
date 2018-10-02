@@ -7,10 +7,20 @@
 	<?php require_once($phpPaths['HTML_INCLUDE'] . "head.php"); ?>
 
 	<link rel="stylesheet" href="fontello/fontello1/css/fontello.css"/>
-	<link rel="stylesheet" href="css/index_upload_section.css"/>
-	<link rel="stylesheet" href="css/index_why_us_section.css"/>
+	<link rel="stylesheet" href="css/index/upload_section.css"/>
+	<link rel="stylesheet" href="css/index/why_us_section.css"/>
+	<link rel="stylesheet" href="css/modal_window.css"/>
+	<link rel="stylesheet" href="css/index/upload_window.css"/>
 
-	<script src="js/uploadBtn.js"></script>
+	<!-- upload plugin -->
+	<script src=<?php echo $htmlPaths['LIB'] . "upload/js/vendor/jquery.ui.widget.js"; ?> ></script>
+	<script src=<?php echo $htmlPaths['LIB'] . "upload/js/jquery.iframe-transport.js"; ?> ></script>
+	<script src=<?php echo $htmlPaths['LIB'] . "upload/js/jquery.fileupload.js"; ?> ></script>
+
+	<script src="js/php_scripts_path.js"></script>
+	<script src="js/upload_btn.js"></script>
+	<script src="js/modal_window.js"></script>
+	<script src="js/upload_window.js"></script>
 </head>
 <body>
 	<?php require_once($phpPaths['HTML_INCLUDE'] . "navbar.php"); ?>
@@ -31,7 +41,7 @@
 				<div class="col-xs-12 col-md" id="uploadBtnWrapper">
 					<div class="uploadBtnOutline" id="uploadBtnOuterOutline">
 						<div class="uploadBtnOutline" id="uploadBtnInnerOutline">
-							<button id="uploadBtn" type="button" tabindex="-1">
+							<button id="uploadBtn" type="button" tabindex="-1" onclick="uploadWindow.openClose()">
 								<div id="uploadBtnBcg"></div>
 								<i class="icon-upload-cloud-outline"></i>
 							</button>
@@ -89,5 +99,28 @@
 			</div>
 		</div>
 	</section>
+
+	<div id="uploadWindowBcg" class="modalWindowBcg"></div>
+	<div id="uploadWindow" class="modalWindow">
+		<div class="closeBtnWrapper">
+			<button id="closeUploadBtn" class="closeBtn" onclick="uploadWindow.openClose()">&times;</button>
+		</div>
+
+		<h4>Wybierz plik i możemy zaczynać...</h4>
+		
+		<div id="fileSelection">
+			<form method="post" enctype="multipart/form-data" action=<?php echo $htmlPaths['PHP'] . 'upload.php'; ?> >
+				<input id="uploadInput" type="file" name="file"/><br/>
+				<input id="startUploadBtn" type="submit" class="btn btn-success" value="Start"/>
+			</form>
+		</div>
+
+		<div id="progress">
+			<div id="progressBarWrapper">
+				<div id="progressBar"></div>
+			</div>
+			<span id="progressPercentage" class="ml-1">0%</span>
+		</div>
+	</div>
 </body>
 </html>

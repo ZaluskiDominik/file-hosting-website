@@ -17,11 +17,14 @@ $htmlPaths = [
 	'PHP' => '/file_upload/resources/php/'
 ];
 
-//absolute sstem paths to some more important directories
+//absolute system paths to some more important directories
 $phpPaths = [
 	'PUBLIC_HTML' => $_SERVER['DOCUMENT_ROOT'] . '/file_upload/public_html/',
 	'HTML_INCLUDE' => $_SERVER['DOCUMENT_ROOT'] . '/file_upload/resources/html_include/',
 	'LIB' => $_SERVER['DOCUMENT_ROOT'] . '/file_upload/lib/',
 	'PHP' => $_SERVER['DOCUMENT_ROOT'] . '/file_upload/resources/php/'
 ];
+
+//path to uploaded files
+define('UPLOAD_PATH', 'C:\\xampp\\htdocs\\file_upload\\resources\\uploaded_files\\');
 ?>

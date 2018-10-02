@@ -1,8 +1,16 @@
 html, body
 {
 	margin: 0;
-	min-height: 100%;
+	min-height: 100% !important;
+	height: 100%;
 	font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, button
+{
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
 #nav > a
@@ -51,7 +59,7 @@ h1
 	font-weight: bold;
 	letter-spacing: 1px;
 	font-size: 36px;
-	margin-top: 10px 20px 0 20px;
+	margin: 10px 20px 0 20px;
 	text-align: center;
 	padding: 10px 0 10px 0;
 }
