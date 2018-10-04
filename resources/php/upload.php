@@ -2,46 +2,87 @@
 session_start();
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/file_upload/resources/php/config.php');
+require_once($phpPaths['PHP'] . 'upload-validation.php');
 require_once($phpPaths['PHP'] . 'db-manager.php');
 
-//ends script with response(message and whether it's an error)
-function endResp($msg, $errFlag)
+class Upload
 {
-	//if it's an error, set status code to error code
-	if ($errFlag)
-		http_response_code(400);
-	die(json_encode([ 'msg' => $msg, 'error' => $errFlag ]));
+	private $response;
+
+	public function __construct()
+	{
+		//get validation result
+		$validation = new UploadValidation();
+		$validation->validate();
+		$this->response = $validation->getValidationResult();
+		//add entry for uploaded files urls ad names
+		$this->response['files'] = [];
+	}
+
+	//uploads files
+	public function upload()
+	{
+		for ($i = 0 ; $i < count($_FILES['files']['size']) ; $i++)
+		{
+			$destPath = $this->getFilePath($_FILES['files']['name'][$i]);
+			$this->saveFile($_FILES['files']['tmp_name'][$i], $destPath, $i);
+		}
+
+		$this->response['success'] = true;
+	}
+
+	public function getResponse()
+	{
+		return $this->response;
+	}
+
+	//moves uploaded files from temp location to disc
+	private function saveFile($tmpPath, $destPath, $fileIndex)
+	{
+		$originalFileName = basename($_FILES['files']['name'][$fileIndex]);
+		$uploadedFileName = basename($destPath);
+
+		//!!!!!!!!!!!!!!!!!! MAKE IT WORK FOR ACCOUNT
+
+		if ( move_uploaded_file($tmpPath, $destPath) )
+		{
+			$this->response['files'][] = [
+				'url' => UPLOADED_URL . $uploadedFileName,
+				'name' => $originalFileName
+			];
+		}
+		else
+		{
+			$this->response['urls'][] = [
+				'url' => "",
+				'name' => $originalFileName
+			];
+			$this->response['errors']['perFile'][$fileIndex] = "Nieudało się przesłać pliku.";
+		}
+	}
+
+	//returns a file's path under which it will be stored
+	private function getFilePath($originalName)
+	{
+		if ( isset($_SESSION['userId']) )
+		{
+			$userData = ( DBManager($_SESSION['userId']) )->getUserData();
+			$targetFile = UPLOAD_PATH . $userData['login'] . '\\' . basename($originalName);
+		}
+		else
+			$targetFile = UPLOAD_PATH . basename($originalName);
+
+		if ( file_exists($targetFile) )
+		{
+			for ($i = 0 ; file_exists($targetFile . $i) ; $i++);
+			$targetFile .= $i;
+		}
+
+		return $targetFile;
+	}
 }
 
-//check if post var isn't empty
-if ( empty($_FILES['file']) )
-	endResp("Plik nie został wybrany", true);
-
-//check if any error occured
-if ( $_FILES['file']['error'] )
-	endResp("Wystąpił błąd. Sprawdź czy wybrany plik nie przekracza maksymalnego rozmiaru.", true);
-
-//destination path of uploaded file
-$targetFile = UPLOAD_PATH . basename($_FILES["file"]["name"]);
-//file size
-$size = $_FILES['file']['size'];
-
-//check if file already exists
-if ( file_exists($targetFile) )
-	endResp("Plik o podanej nazwie już istnieje.", true);
-
-//validate file size
-$dbManager = new DBManager( isset( $_SESSION['userId'] ) ? $_SESSION['userId'] : null );
-$accountInfo = $dbManager->getAccountInfo();
-if ( $size > $accountInfo['max_file_size'])
-	endResp("Plik jest zbyt duży.", true);
-
-if ( move_uploaded_file($_FILES['file']['tmp_name'], $targetFile) )
-{
-	//file uploaded successfully
-	endResp("", false);
-}
-
-//an error occured
-endResp("Wystąpił błąd. Spróbuj ponownie.", true);
+$upload = new Upload();
+$upload->upload();
+echo json_encode( $upload->getResponse() );
 ?>

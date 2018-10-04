@@ -29,5 +29,14 @@ class DBManager
 			return $stmt->fetch();
 		}
 	}
+
+	//returns associative array with user's data
+	public function getUserData()
+	{
+		$conn = connectToDB();
+		$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+		$stmt->execute([ $this->userId ]);
+		return $stmt->fetch();
+	}
 }
 ?>

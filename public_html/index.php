@@ -9,18 +9,21 @@
 	<link rel="stylesheet" href="fontello/fontello1/css/fontello.css"/>
 	<link rel="stylesheet" href="css/index/upload_section.css"/>
 	<link rel="stylesheet" href="css/index/why_us_section.css"/>
+	<link rel="stylesheet" href="css/index/upload_button.css"/>
 	<link rel="stylesheet" href="css/modal_window.css"/>
 	<link rel="stylesheet" href="css/index/upload_window.css"/>
+	<link rel="stylesheet" href="css/alert_icons.css"/>
 
 	<!-- upload plugin -->
 	<script src=<?php echo $htmlPaths['LIB'] . "upload/js/vendor/jquery.ui.widget.js"; ?> ></script>
 	<script src=<?php echo $htmlPaths['LIB'] . "upload/js/jquery.iframe-transport.js"; ?> ></script>
 	<script src=<?php echo $htmlPaths['LIB'] . "upload/js/jquery.fileupload.js"; ?> ></script>
 
-	<script src="js/php_scripts_path.js"></script>
-	<script src="js/upload_btn.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/index/upload_btn.js"></script>
 	<script src="js/modal_window.js"></script>
-	<script src="js/upload_window.js"></script>
+	<script src="js/index/upload_window.js"></script>
+	<script src="js/alert.js"></script>
 </head>
 <body>
 	<?php require_once($phpPaths['HTML_INCLUDE'] . "navbar.php"); ?>
@@ -106,13 +109,16 @@
 			<button id="closeUploadBtn" class="closeBtn" onclick="uploadWindow.openClose()">&times;</button>
 		</div>
 
-		<h4>Wybierz plik i możemy zaczynać...</h4>
+		<h2 class="text-dark">Wybierz plik i możemy zaczynać...</h2>
 		
-		<div id="fileSelection">
-			<form method="post" enctype="multipart/form-data" action=<?php echo $htmlPaths['PHP'] . 'upload.php'; ?> >
-				<input id="uploadInput" type="file" name="file"/><br/>
-				<input id="startUploadBtn" type="submit" class="btn btn-success" value="Start"/>
-			</form>
+		<form method="post" enctype="multipart/form-data" action=<?php echo $htmlPaths['PHP'] . 'upload.php'; ?> >
+			<input id="uploadInput" type="file" name="files[]" multiple=""/>
+		</form>
+
+		<div id="dropFilesArea" class="text-secondary">
+			Przeciągnij i upuść pliki tutaj<br/>
+			lub<br/>
+			Kliknij by wybrać plik
 		</div>
 
 		<div id="progress">
@@ -121,6 +127,12 @@
 			</div>
 			<span id="progressPercentage" class="ml-1">0%</span>
 		</div>
+
+		<div id="uploadStatus"></div>
+		<span class="text-dark d-block" style="text-align: left;">Szczegółowe informacje</span>
+		<div id="uploadLogs"></div>
+
+		<button id="cancelUploadBtn" class="btn btn-warning">Anuluj</button>
 	</div>
 </body>
 </html>
