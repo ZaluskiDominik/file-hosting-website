@@ -31,10 +31,7 @@ class UploadValidation
 		{
 			//if an error occured end script and output json info about validation result
 			if ($err != "")
-			{
 				$this->outputJsonValidationResult();
-				break;
-			}
 		}
 	}
 
@@ -59,12 +56,20 @@ class UploadValidation
 				'global' => '',
 				//perFile --> array of error string for each file, empty string --> no errors
 				'perFile' => []
-			]
+			],
+			'files' => []
 		];
 
 		//fill perFile array with empty strings --> no error
+		//fill files array with name of each file and empty url(download url will be added after a file is uploaded)
 		for ($i = 0 ; $i < count($_FILES['files']['size']) ; $i++)
+		{
 			$this->validResult['errors']['perFile'][] = "";
+			$this->validResult['files'][] = [
+				'name' => basename( $_FILES['files']['name'][$i] ),
+				'url' => ""
+			];
+		}
 	}
 
 	//check if $_FILES['files'] var isn't empty
@@ -72,7 +77,7 @@ class UploadValidation
 	{
 		if ( empty($_FILES['files']) )
 		{
-			$this->validResult['errors']['global'] = "Plik nie został wybrany.";
+			$this->validResult['errors']['global'] = "Pliki nie zostały przesłane.<br/>Błąd: Żaden plik nie został wybrany.";
 			$this->outputJsonValidationResult();
 		}
 	}
@@ -80,11 +85,23 @@ class UploadValidation
 	//check if sum of all files' sizes doesn't exceed limit
 	private function validateMaxStorageSizeLimit()
 	{
-		$sumSize = 0;
+		//sum sizes of all files
+		$uploadSize = 0;
 		foreach ($_FILES['files']['size'] as $size)
-			$sumSize += $size;
+			$uploadSize += $size;
 
+		//total size of this user's files saved on disc
+		$dbUser = new DBManager( ( isset($_SESSION['userId']) ) ? $_SESSION['userId'] : null );
+		$storageSize = $dbUser->getUserStorageSize();
+		//limit to storage size
+		$maxStorageSize = $dbUser->getAccountInfo()['max_storage'];
 
+		//if after this upload total size of user's files on disc exceeds the limit, set error message and exit script
+		if ( $storageSize + $uploadSize > $maxStorageSize )
+		{
+			$this->validResult['errors']['global'] = "Pliki nie zostały przesłane.<br/>Błąd: Przekroczono limit całkowitego rozmiaru przechowywanych przez Ciebie plików na serwerze.";
+			$this->outputJsonValidationResult();
+		}
 	}
 
 	//check if any error occured in $_FILES['files']['error']
@@ -92,7 +109,7 @@ class UploadValidation
 	{
 		if ( $_FILES['files']['error'][$index] )
 		{
-			$this->validResult['errors']['perFile'][$index] = "Wystąpił nieznany błąd. Sprawdź czy wybrany plik nie przekracza maksymalnego rozmiaru.";
+			$this->validResult['errors']['perFile'][$index] = "Plik nie został przesłany.<br/>Błąd: Wystąpił nieznany błąd. Sprawdź czy wybrany plik nie przekracza maksymalnego rozmiaru.";
 		}
 	}
 	
@@ -104,8 +121,7 @@ class UploadValidation
 		//if file size is greater that max file size
 		if ( $_FILES['files']['size'][$index] > $accountInfo['max_file_size'] )
 		{
-			$this->validResult['errors']['perFile'][$index] = "Plik jest zbyt duży. Maksymalny rozmiar pliku to "
-				 . $accountInfo['max_file_size'];
+			$this->validResult['errors']['perFile'][$index] = "Plik nie został przesłany.<br/>Błąd: Plik jest zbyt duży. Maksymalny rozmiar pliku to " . $accountInfo['max_file_size'];
 		}
 	}
 }

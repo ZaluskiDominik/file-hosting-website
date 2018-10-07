@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="css/index/upload_button.css"/>
 	<link rel="stylesheet" href="css/modal_window.css"/>
 	<link rel="stylesheet" href="css/index/upload_window.css"/>
-	<link rel="stylesheet" href="css/alert_icons.css"/>
+	<link rel="stylesheet" href="css/alert.css"/>
 
 	<!-- upload plugin -->
 	<script src=<?php echo $htmlPaths['LIB'] . "upload/js/vendor/jquery.ui.widget.js"; ?> ></script>
@@ -110,12 +110,11 @@
 		</div>
 
 		<h2 class="text-dark">Wybierz plik i możemy zaczynać...</h2>
-		
-		<form method="post" enctype="multipart/form-data" action=<?php echo $htmlPaths['PHP'] . 'upload.php'; ?> >
-			<input id="uploadInput" type="file" name="files[]" multiple=""/>
-		</form>
 
 		<div id="dropFilesArea" class="text-secondary">
+			<form method="post" enctype="multipart/form-data" action=<?php echo $htmlPaths['PHP'] . 'upload.php'; ?> >
+				<input id="uploadInput" type="file" name="files[]" multiple=""/>
+			</form>
 			Przeciągnij i upuść pliki tutaj<br/>
 			lub<br/>
 			Kliknij by wybrać plik

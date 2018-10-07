@@ -19,6 +19,7 @@
 
 #dropFilesArea
 {
+	position: relative;
 	border: 4px dashed skyblue;
 	height: 160px;
 	display: flex;
@@ -31,11 +32,14 @@
 
 input[type=file]
 {
+	cursor: pointer;
 	position: absolute;
 	opacity: 0;
-	z-index: -10;
-	height: 0.1px;
-	width: 0.1px;
+	z-index: 12;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
 #progress

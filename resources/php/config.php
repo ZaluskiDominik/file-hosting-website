@@ -26,8 +26,8 @@ $phpPaths = [
 ];
 
 //path to uploaded files
-define('UPLOAD_PATH', 'C:\\xampp\\htdocs\\file_upload\\resources\\uploaded_files\\');
+define('UPLOAD_PATH', 'C:/xampp/htdocs/file_upload/resources/uploaded_files/');
 
-//url of uploaded files folder
-define('UPLOADED_URL', "http://localhost/file_upload/resources/uploaded_files/");
+//download url(need to specify id of file in get field)
+define('DOWNLOAD_URL', "http://localhost/file_upload/resources/php/download.php");
 ?>

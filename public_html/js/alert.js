@@ -17,10 +17,10 @@ class Alert
 		let attr = this.getAttributesByType();
 
 		$(this.parent).append( $("<div></div>")
-		.addClass("alert alert-dismissible " + attr.alertClass)
+		.addClass("alert alert-dismissible customAlert " + attr.alertClass)
 		//icon
-		.append( $("<span></span>")
-			.addClass(attr.iconClass + " alertIcon mr-1")
+		.append( $("<div></div>")
+			.addClass(attr.iconClass + " alertIcon")
 			.html(attr.icon)
 			)
 		//message
@@ -30,7 +30,7 @@ class Alert
 		//close button
 		.append( $("<button></button>")
 			.prop("tabindex", "-1")
-			.addClass("close")
+			// .addClass("close")
 			.attr("data-dismiss", "alert")
 			.html("&times;")
 			)
