@@ -21,11 +21,6 @@ let uploadWnd = {
 		this.initWindow();
 		this.initUploadPlugin();
 		this.initUploadResultsSwitch();
-		// this.addAlert("success", "Hello there!<br>h");
-		// this.addAlert("warning", "Hello there!", true);
-		// this.addAlert("success", "Hello there!");
-		// this.addAlert("warning", "Hello there!", true);
-		// this.addAlert("success", "Hello there!");
 	},
 
 	//inits window
