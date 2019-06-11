@@ -1,0 +1,112 @@
+#nav
+{
+	justify-content: flex-start;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#nav > button:first-child
+{
+	outline: none;
+}
+
+#nav > button:first-child > span
+{
+	transition: transform 0.5s;
+}
+
+#nav > button:first-child:hover > span
+{
+	transform: rotateZ(90deg);
+}
+
+#logo
+{
+	margin-left: 10px;
+	display: block;
+	display: flex;
+	align-items: center;
+	order: 1;
+}
+
+#logo img
+{
+	width: 32px;
+	height: 32px;
+	margin-right: 4px;
+}
+
+#logo > span
+{
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: skyblue;
+	font-size: 20px;
+}
+
+#logo > span > span
+{
+	color: red;
+	margin-left: 2px;
+	margin-right: 2px;
+	font-size: 22px;
+}
+
+#navOptions
+{
+	order: 2;
+}
+
+#navOptions li
+{
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid transparent;
+}
+
+#navOptions li:hover
+{
+	border-bottom: 1px solid #ccc;
+}
+
+#nav > div:last-child
+{
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	order: 3;
+}
+
+@media only screen and (max-width: 1140px)
+{
+	#nav > div:last-child
+	{
+		order: 1;
+	}	
+}
+
+.loginBtn
+{
+	border: 1px solid lightgray;
+}
+
+#storageInfo
+{
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+#storageInfo > span
+{
+	white-space: nowrap;
+	font-size: 12px;
+	color: gray;
+	text-shadow: 1px 1px 1px #555;
+}
+
+#storageInfo > span > span
+{
+	font-weight: bold;
+}

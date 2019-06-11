@@ -1,0 +1,15 @@
+#loginWindow
+{
+	width: 60%;
+	max-width: 600px !important;
+	min-width: 350px !important;
+	text-align: center;
+}
+
+#loginErr
+{
+	padding: 5px 0 5px 0;
+	color: red;
+	font-weight: bold;
+	font-size: 12px;
+}

@@ -1,0 +1,40 @@
+html, body
+{
+	margin: 0;
+	min-height: 100% !important;
+	font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, button
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+section
+{
+	box-sizing: border-box;
+	min-height: 100vh;
+	padding: 10px;
+	padding-top: 20px;
+}
+
+h1
+{
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 36px;
+	margin: 10px 20px 0 20px;
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+h2
+{
+	margin-top: 10px;
+	font-size: 26px;
+	text-align: center;
+	text-shadow: 2px 2px 2px gray;
+	margin-bottom: 20px;
+}
