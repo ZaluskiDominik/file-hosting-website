@@ -593,6 +593,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Taisa/Desktop/studia/angielski/4_test.txt",
+		"/C/Users/Taisa/Desktop/studia/angielski/3_test.txt",
 		"/C/xampp/htdocs/file_upload/public/html/css/index/upload_window.css",
 		"/C/xampp/htdocs/file_upload/public/html/js/index/upload_window.js",
 		"/C/xampp/htdocs/file_upload/private/templates/upload-window.php",
@@ -627,7 +629,6 @@
 		"/C/xampp/htdocs/file_upload/private/php/restrict-functions.php",
 		"/C/xampp/htdocs/file_upload/private/php/upload/upload.php",
 		"/C/xampp/htdocs/file_upload/private/php/user-data.php",
-		"/C/Users/Taisa/Desktop/studia/angielski/4_test.txt",
 		"/C/Users/Taisa/Downloads/v_simplest.glsl",
 		"/C/xampp/htdocs/file_upload/public/html/css/index/why_us_section.css",
 		"/C/xampp/htdocs/file_upload/public/html/css/index/upload_section.css",
@@ -719,8 +720,7 @@
 		"/C/xampp/htdocs/file_upload/public_html/css/login_window.css",
 		"/C/xampp/htdocs/file_upload/resources/html_include/login-window.php",
 		"/C/xampp/htdocs/file_upload/resources/html_include/navbar.php",
-		"/C/xampp/htdocs/file_upload/public_html/css/index/upload_window.css",
-		"/C/xampp/htdocs/file_upload/public_html/js/index/upload_window.js"
+		"/C/xampp/htdocs/file_upload/public_html/css/index/upload_window.css"
 	],
 	"find":
 	{

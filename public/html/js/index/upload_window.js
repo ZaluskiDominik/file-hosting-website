@@ -44,7 +44,7 @@ let uploadWnd = {
 			this.switchResultsDiv("uploadedFileLinks", "uploadLinksBtn");
 		});
 
-		this.selectSwitchBtn("uploadLogsBtn");
+		this.switchResultsDiv("uploadLogs", "uploadLogsBtn");
 	},
 
 	//displays div with given ID inside uploadResults and hides rest of them
@@ -87,9 +87,10 @@ let uploadWnd = {
 	openUploadStatusPopover(type, msg)
 	{
 		popover.open({
-			target: $("#uploadResults"),		
-			alignH : "top",
-			type : type
+			target: $("#progress")[0],		
+			alignV : "bottom",
+			type : type,
+			msg : msg
 		});
 	},
 
@@ -232,7 +233,16 @@ let uploadWnd = {
 	//adds download link for uploaded file to links section
 	addDownloadLink : function(file)
 	{
-
+		let link = DOWNLOAD_PAGE_URL + file.serverName;
+		
+		$("<div></div>").addClass("downloadLinkRow")
+			.append( $("<span></span>").html(file.clientName) )
+			.append( $("<a></a>")
+						.html(link)
+						.attr("href", link)
+						.attr("target", "_blank")
+			)
+			.appendTo( $("#uploadedFileLinks") );
 	},
 
 	//opens popover with information about wheter files were uploaded without
@@ -270,9 +280,89 @@ let uploadWnd = {
 		//clear logs from client validation logs
 		this.removeClientValidationAlerts();
 
+		//don't start upload if one of files didn't pass validation
+		if ( !this.validateFiles(data.files) )
+			return;
+
 		//increase counter of sent files and submit them to upload
 		this.numSentFiles += data.files.length;
 		data.submit();
+	},
+
+	//returns true if all files match upload constraints
+	//if not warning alert will be added to upload logs and popover
+	//informing about not matched constraints will be displayed
+	validateFiles : function(files)
+	{
+		return ( this.validateMaxNumUploads(files) 
+				&& this.validateMaxStorageSize(files)
+				&& this.validateMaxFileSize(files) );
+	},
+
+	//returns true if each file's size is less that the max file size
+	validateMaxFileSize : function(files)
+	{
+		let exceeded = false;
+		//message to display in case of exceed file size limit
+		let maxSizeMsg = "Przekroczono maksymalny rozmiar pliku " +
+			round(account.upload.maxFileSize / GB, 0) + "GB";
+
+		files.forEach( (file) => {
+			//if file size was exceeded
+			if (file.size > account.upload.maxFileSize)
+			{
+				exceeded = true;
+				//add alert to upload logs
+				this.addAlert("warning", "Plik <b>" + file.name + 
+					"</b>: " + maxSizeMsg, true);
+			}
+		});
+
+		//open warning popover if at least one file exceeded max file size
+		if (exceeded)
+		{
+			console.log("warn");
+			this.openUploadStatusPopover("warning", maxSizeMsg);
+		}
+
+		return !exceeded;
+	},
+
+	//returns true if files won't exceed max storage size of this user
+	//after upload
+	validateMaxStorageSize : function(files)
+	{
+		//sum file sizes
+		let sumSize = 0;
+		files.forEach( (file) => { sumSize += file.size; });
+
+		//available storage space for use
+		let freeSpace = ( account.upload.maxStorageSize * GB ) 
+			- user.storageUsedSize;
+
+		//if sum of files sizes to upload + already used storage space by the user
+		//exceed the limit open warning popover
+		if (sumSize > freeSpace)
+		{
+			this.openUploadStatusPopover("warning", "Brakuje miejsca na dysku."
+				+ " Pozostało " + round(freeSpace / GB, 2) + "GB");
+			return false;
+		}
+
+		return true;
+	},
+
+	//returns true if number of files don't exceed the limit
+	validateMaxNumUploads : function(files)
+	{
+		if (files.length > account.upload.maxNum)
+		{
+			this.openUploadStatusPopover("warning", "Maksymalnie możesz"
+				+ " przesłać " + account.upload.maxNum + " plików naraz");
+			return false;
+		}
+
+		return true;
 	}
 };
 

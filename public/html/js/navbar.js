@@ -8,8 +8,7 @@ let navbar = {
 		let maxSizeGB = Math.round(account.upload.maxStorageSize / GB, 2);
 		$("#storageMaxSize").html(maxSizeGB);
 		//size of files in GB uploaded by user
-			let usedSizeGB = (Math.round(user.storageUsedSize / GB * 100) / 100)
-			.toFixed(2);
+		let usedSizeGB = round(user.storageUsedSize / GB, 2);
 		$("#storageUsedSize").html(usedSizeGB);
 
 		//display used size and max size in KB within tooltip

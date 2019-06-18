@@ -12,7 +12,7 @@
 <script src=<?php echo '"' . $htmlPaths['LIB'] . '/bootstrap/js/bootstrap.min.js"'?> ></script>
 
 <!-- fontello font icons -->
-<link rel="stylesheet" href="fontello/fontello1/css/fontello.css"/>
+<link rel="stylesheet" href="fontello/css/fontello.css"/>
 
 
 <!-- css files -->
