@@ -3,6 +3,7 @@ require_once($phpPaths['PHP'] . '/db-connect.php');
 
 class AccountData
 {
+	//accountType - one of following: 'guest', 'regular', 'premium'
 	public function __construct(string $accountType)
 	{
 		$this->accountType = $accountType;
@@ -30,6 +31,15 @@ class AccountData
 	public function getUploadConstraints()
 	{
 		return $this->uploadConstraints;
+	}
+
+	//returns merged arrays of upload constraints and download constraints
+	public function getConstraints()
+	{
+		return [
+			'upload' => $this->uploadConstraints,
+			'download' => $this->downloadConstraints
+		];
 	}
 
 	//PRIVATE SECTION

@@ -1,0 +1,31 @@
+#compareAccountsSection
+{
+    height: 100%;
+    position: relative;
+    background-image: url('/resources/img/accounts_comp.jpg')
+}
+
+#compareAccountsSection h1
+{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+}
+
+#compareAccountsSection > h1 img
+{
+    width: 48px;
+    height: 48px;
+    transform: translateY(-3px);
+}
+
+#accountsTableWrapper
+{
+    display: inline-block;
+    position: relative;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px black;
+}

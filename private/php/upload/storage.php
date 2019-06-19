@@ -5,7 +5,7 @@ require_once($phpPaths['PHP'] . '/ip-retriever.php');
 
 class UserStorage
 {
-	//constructs UserStrage instance for curren client
+	//constructs UserStorage instance for curren client
 	public static function constructCurrentClient()
 	{
 		//is user is logged in call constructUserId function
@@ -30,6 +30,29 @@ class UserStorage
 		$inst->calcUsedSize($uploadedFiles);
 
 		return $inst;
+	}
+
+	/*Returns array of
+	[
+		'path' - path to file stored within filesystem
+		'clientName' - name that this file had on client side computer of a user that
+		uploaded it
+		'ownerId' - id of a user that uploaded a file
+		'ownerIp' - ip address of a user that uploaded a file
+	]
+	returned array contains data stored in db about file with name=serverFilename
+	(server side name)
+	//if no entry found returns null
+	*/
+	public static function getFileData(string $serverFilename)
+	{
+		$db = connectToDB();
+		$stmt = $db->prepare("SELECT owner_id, owner_ip, path, client_filename
+			FROM uploaded_files
+			WHERE SUBSTRING_INDEX(path, '/', -1) = ?");
+		$stmt->execute([ $serverFilename ]);
+
+		return $stmt->fetch();
 	}
 
 	//returns total size of files uploaded by this users

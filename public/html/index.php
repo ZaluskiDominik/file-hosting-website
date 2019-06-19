@@ -5,10 +5,12 @@
 
 	<link rel="stylesheet" href="css/index/upload_section.css"/>
 	<link rel="stylesheet" href="css/index/why_us_section.css"/>
+	<link rel="stylesheet" href="css/index/compare_accounts_section.css"/>
 	<link rel="stylesheet" href="css/index/upload_button.css"/>
 	<link rel="stylesheet" href="css/modal_window.css"/>
 	<link rel="stylesheet" href="css/index/upload_window.css"/>
 	<link rel="stylesheet" href="css/index/upload_alert.css"/>
+	<link rel="stylesheet" href="css/compare_accounts_table.css"/>
 
 	<script src="js/index/upload_btn.js"></script>
 	<script src="js/index/upload_window.js"></script>
@@ -100,6 +102,16 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section id="compareAccountsSection">
+		<h1>
+			<img src="/resources/img/medal.png">
+			Premium mają lepiej!
+		</h1>
+		<div id="accountsTableWrapper">
+			<?php include($phpPaths['TEMPLATES'] . '/compare-accounts-table.php'); ?>
 		</div>
 	</section>
 

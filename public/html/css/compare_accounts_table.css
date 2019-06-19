@@ -1,0 +1,103 @@
+.compareAccountsTable
+{
+    width: 90vw;
+    min-width: 600px;
+    max-width: 1000px;
+}
+
+.compareAccountsTable table
+{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.compareAccountsTable td, .compareAccountsTable th
+{
+    width: 23%;
+    height: 28px;
+    text-align: center;
+}
+
+.compareAccountsTable tr td:first-child, .compareAccountsTable tr th:first-child
+{
+    width: 31%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.compareAccountsTable th
+{
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 2px;
+    padding: 5px 0 5px 0;
+}
+
+.compareAccountsTable td
+{
+    font-size: 19px;
+    padding: 14px 0 14px 0;
+}
+
+.compareAccountsTable table tr td:first-child
+{
+    text-shadow: 2px 2px 2px #888;
+    background-color: #00BFFF;
+    border-right: 1px solid gray;
+}
+
+.compareAccountsTable table tr:not(:last-child) td:not(:first-child)
+{
+    border-bottom: 1px solid #444;
+}
+
+.compareAccountsTable table tr:nth-child(4) td
+{
+    border-bottom: 2px solid #666 !important;
+}
+
+.compareAccountsTable table tr:first-child th:nth-child(2)
+{
+    box-shadow: 0 0 6px #555 inset;
+    background-image: linear-gradient(#a9a9a9, #c0c0c0);
+}
+
+.compareAccountsTable table tr td:nth-child(2)
+{
+    background-color: #d3d3d3;
+}
+
+.compareAccountsTable table tr:first-child th:nth-child(3)
+{
+    box-shadow: 0 0 6px brown inset;
+    background-image: linear-gradient(#ff8c00, #ffa500);
+}
+
+.compareAccountsTable table tr td:nth-child(3)
+{
+    background-color: #ffb611;
+}
+
+.compareAccountsTable table tr:first-child th:nth-child(4)
+{
+    box-shadow: 0 0 6px #006400 inset;
+    background-image: linear-gradient(#32CD32, #00ff00);
+}
+
+.compareAccountsTable table tr td:nth-child(4)
+{
+    background-color: #7fff00;
+}
+
+.compareAccountsTable td > b
+{
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+    display: inline-block;
+    transform: rotateZ(-5deg);
+    border: 2px solid red;
+    padding: 4px;
+}
