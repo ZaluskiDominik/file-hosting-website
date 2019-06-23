@@ -76,6 +76,8 @@ class CompareAccountsTableContent
         foreach ($this->content as &$account)
         {
             //max upload speed
+            if ($account['download']['maxSpeed'] !== null)
+                $account['download']['maxSpeed'] .= ' Kb/s';
             $this->replaceIfNull($account['download']['maxSpeed'], 'Nieograniczona');
             //max num downloads per $downloadConf['MAX_NUM_DURATION'] seconds
             $this->replaceIfNull($account['download']['maxNum'], 'Nieograniczona');

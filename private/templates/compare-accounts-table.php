@@ -43,7 +43,7 @@ $acc = ( new compareAccountsTableContent() )->get();
     <tr>
         <td>
             Liczba pobrań na 
-            <?php echo round($downloadConf['MAX_NUM_DURATION'] / 3600); ?> 
+            <?php echo round($downloadConf['MAX_NUM_DURATION'] / 60); ?> 
             minut
         </td>
         <td><?php echo $acc['guest']['download']['maxNum']; ?></td>

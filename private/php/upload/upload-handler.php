@@ -1,5 +1,4 @@
 <?php
-require_once($phpPaths['PHP'] . '/custom-exceptions.php');
 require_once($phpPaths['PHP'] . '/user-data.php');
 require_once($phpPaths['PHP'] . '/account-data.php');
 require_once($phpPaths['PHP'] . '/db-connect.php');

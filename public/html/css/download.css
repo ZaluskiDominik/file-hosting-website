@@ -1,0 +1,43 @@
+body
+{
+    text-align: center;
+}
+
+.compareAccountsTable
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.alert
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80vw;
+    max-width: 1000px;
+    font-size: 22px !important;
+}
+
+.downloadBtn
+{
+    outline: none;
+}
+
+.downloadBtn > a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+#usedAllDownloadsAlert
+{
+    visibility: hidden;
+    margin-bottom: none;
+}

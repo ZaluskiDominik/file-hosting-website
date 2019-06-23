@@ -11,3 +11,4 @@ require_once(__DIR__ . '/byte-prefixes.php');
 require_once(__DIR__ . '/download.php');
 //include error handler
 require_once($phpPaths['PHP'] . '/error-handler.php');
+require_once($phpPaths['PHP'] . '/custom-exceptions.php');

@@ -8,3 +8,12 @@ class MoveUploadedFileException extends exception
             $fileName . "' from temporary directory");
     }
 }
+
+class UndefinedTemplateContentVar extends exception
+{
+    public function __construct(string $varName)
+    {
+        parent::__construct("Template variable '" .
+            $varName . "' is undefined!");
+    }
+}

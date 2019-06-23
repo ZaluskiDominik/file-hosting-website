@@ -47,12 +47,14 @@ class UserStorage
 	public static function getFileData(string $serverFilename)
 	{
 		$db = connectToDB();
-		$stmt = $db->prepare("SELECT owner_id, owner_ip, path, client_filename
+		$stmt = $db->prepare("SELECT owner_id AS ownerId, owner_ip AS ownerIp, 
+			path, client_filename AS clientName
 			FROM uploaded_files
 			WHERE SUBSTRING_INDEX(path, '/', -1) = ?");
 		$stmt->execute([ $serverFilename ]);
+		$data = $stmt->fetch();
 
-		return $stmt->fetch();
+		return ( $data === false ) ? null : $data;
 	}
 
 	//returns total size of files uploaded by this users
