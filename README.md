@@ -4,13 +4,14 @@ Website offering file hosting services
 <h1>How to run?</h1>
 Clone repository and move it to your apache root server directory.<br>
 Below is an configuration file of vhost for this web app that needs to be put inside one of apache's configuration files. You need to edit it with appropriate absolute paths of your system(Directives where path should be edited are marked by <b>*</b>).
-<br>
-<pre>
-  &ltVirtualHost 127.0.0.3:80&gt
+<br><br>
+
+&lt;VirtualHost 127.0.0.3:80&gt;
 	ServerName upload-it.pl
 	ServerAlias www.upload-it.pl
 
-	#root directory of web application - should point to public directory(<b>*</b>)
+	root directory of web application - should point to public directory(<b>*</b>)
+	
 	DocumentRoot C:\xampp\htdocs\file-hosting-website\public
 	#turn on errors displaying
 	Php_flag display_errors On
@@ -47,5 +48,5 @@ Below is an configuration file of vhost for this web app that needs to be put in
 
 	#set timezone to UTC+1
 	Php_value date.timezone Europe/Warsaw
-&lt/VirtualHost&lg
-</pre>
+&lt;/VirtualHost&lg;
+
