@@ -6,6 +6,7 @@ Clone repository and move it to your apache root server directory.<br>
 Below is an configuration file of vhost for this web app that needs to be put inside one of apache's configuration files. You need to edit it with appropriate absolute paths of your system(Directives where path should be edited are marked by <b>*</b>).
 <br><br>
 
+<pre>
 &lt;VirtualHost 127.0.0.3:80&gt;
 	ServerName upload-it.pl
 	ServerAlias www.upload-it.pl
@@ -48,5 +49,5 @@ Below is an configuration file of vhost for this web app that needs to be put in
 
 	#set timezone to UTC+1
 	Php_value date.timezone Europe/Warsaw
-&lt;/VirtualHost&lg;
-
+&lt;/VirtualHost&gt;
+</pre>
