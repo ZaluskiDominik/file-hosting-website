@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"padd",
+				"padding-bottom\tproperty"
+			],
+			[
+				"margin",
+				"margin\tproperty"
+			],
+			[
 				"down",
 				"download"
 			],
@@ -42,10 +50,6 @@
 			[
 				"download",
 				"downloadLink"
-			],
-			[
-				"margin",
-				"margin-left\tproperty"
 			],
 			[
 				"va",
@@ -332,10 +336,6 @@
 				"productionHandler"
 			],
 			[
-				"padd",
-				"padding\tproperty"
-			],
-			[
 				"over",
 				"overflow\tproperty"
 			],
@@ -520,19 +520,10 @@
 	"buffers":
 	[
 		{
-			"file": "public/html/css/download.css",
-			"settings":
-			{
-				"buffer_size": 569,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "public/html/js/download.js",
 			"settings":
 			{
-				"buffer_size": 1695,
+				"buffer_size": 1685,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -541,25 +532,7 @@
 			"file": "private/php/download.php",
 			"settings":
 			{
-				"buffer_size": 3488,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "private/config/download.php",
-			"settings":
-			{
-				"buffer_size": 251,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/resources/routes/api/file/download/get.php",
-			"settings":
-			{
-				"buffer_size": 1458,
+				"buffer_size": 3290,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -628,20 +601,26 @@
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/file-hosting-website/private/templates/compare-accounts-table.php",
-		"/C/xampp/htdocs/file-hosting-website/private/php/compare-accounts-table-content.php",
+		"/C/xampp/htdocs/file-hosting-website/public/html/css/download.css",
+		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download/get.php",
+		"/C/xampp/htdocs/file-hosting-website/private/config/download.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download/wait/get.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/download.php",
+		"/C/xampp/htdocs/file-hosting-website/public/html/index.php",
+		"/C/xampp/htdocs/file-hosting-website/public/html/css/login_window.css",
+		"/C/xampp/htdocs/file-hosting-website/private/templates/login-window.php",
+		"/C/xampp/htdocs/file-hosting-website/public/html/fontello/css/fontello.css",
+		"/C/xampp/htdocs/file-hosting-website/public/html/css/modal_window.css",
+		"/C/xampp/htdocs/file-hosting-website/private/templates/compare-accounts-table.php",
+		"/C/xampp/htdocs/file-hosting-website/private/php/compare-accounts-table-content.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/upload/storage.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/restrict-functions.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/popover.js",
 		"/C/xampp/htdocs/file-hosting-website/private/php/upload/upload-handler.php",
 		"/C/xampp/htdocs/file-hosting-website/private/config/config.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/failed_request.js",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download/get.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/account-data.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/user-data.php",
-		"/C/xampp/htdocs/file-hosting-website/private/config/download.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/ip-retriever.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/data/get.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/constraints/download/get.php",
@@ -650,7 +629,6 @@
 		"/C/xampp/htdocs/file-hosting-website/private/templates/download/button.php",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/download/file-found.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/config/config.js",
-		"/C/xampp/htdocs/file-hosting-website/public/html/index.php",
 		"/C/xampp/htdocs/file-hosting-website/private/config/paths.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/compare_accounts_section.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/compare_accounts_table.css",
@@ -666,8 +644,6 @@
 		"/C/xampp/htdocs/file-hosting-website/private/templates/upload-window.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_window.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_alert.css",
-		"/C/xampp/htdocs/file-hosting-website/public/html/fontello/css/fontello.css",
-		"/C/xampp/htdocs/file-hosting-website/public/html/css/modal_window.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/fontello/fontello1/css/fontello.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/fontello/fontello1/config.json",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/byte_prefixes.js",
@@ -752,14 +728,11 @@
 		"/C/xampp/htdocs/file_upload/resources/php/get-account-info.php",
 		"/C/xampp/htdocs/test_laravel/project/public/css/global.css",
 		"/C/xampp/htdocs/test_laravel/project/resources/views/about.blade.php",
-		"/C/xampp/htdocs/test_laravel/project/resources/views/add-div.blade.php",
-		"/C/xampp/htdocs/test_laravel/project/routes/web.php",
-		"/C/xampp/htdocs/test_laravel/project/app/Http/Controllers/PagesController.php",
-		"/C/xampp/htdocs/test_laravel/project/.env"
+		"/C/xampp/htdocs/test_laravel/project/resources/views/add-div.blade.php"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -773,6 +746,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"time",
+			"padd",
+			"email",
+			"placeholder",
+			"Password",
 			"MAX_NUM_DURATION",
 			"length",
 			"filesize",
@@ -895,12 +873,7 @@
 			"matchMaxStorageSizeConstraint",
 			"matchMaxNumUploadsConstraints",
 			"ERR_SUCCESS",
-			"uplaod",
-			"\t\t\t\t\t'",
-			"setUploadSummaryConstraintError",
-			"handleMaxFilesSizeConstraint",
-			"sum",
-			"handleErrors"
+			"uplaod"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -919,59 +892,31 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/html/css/download.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 569,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								542,
-								542
-							]
-						],
-						"settings":
-						{
-							"SL.29.region_keys":
-							[
-							],
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 259.666666667,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "public/html/js/download.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1695,
+						"buffer_size": 1685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								475,
-								475
+								1201,
+								1201
 							]
 						],
 						"settings":
 						{
+							"SL.14.region_keys":
+							[
+							],
 							"SL.70.region_keys":
 							[
 							],
@@ -982,24 +927,24 @@
 						"translation.y": 279.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "private/php/download.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3488,
+						"buffer_size": 3290,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2431,
-								2431
+								1866,
+								1866
 							]
 						],
 						"settings":
@@ -1015,78 +960,10 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 838.0,
+						"translation.y": 498.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "private/config/download.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 251,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								247,
-								247
-							]
-						],
-						"settings":
-						{
-							"SL.31.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "public/resources/routes/api/file/download/get.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								605,
-								605
-							]
-						],
-						"settings":
-						{
-							"SL.153.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.16.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 400.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1145,6 +1022,46 @@
 		"selected_items":
 		[
 			[
+				"wait/ge",
+				"public\\resources\\routes\\api\\file\\download\\wait\\get.php"
+			],
+			[
+				"file/",
+				"public\\resources\\routes\\api\\file\\download\\get.php"
+			],
+			[
+				"download",
+				"public\\html\\download.php"
+			],
+			[
+				"inde",
+				"public\\html\\index.php"
+			],
+			[
+				"fonte",
+				"public\\html\\fontello\\css\\fontello.css"
+			],
+			[
+				"moda",
+				"public\\html\\css\\modal_window.css"
+			],
+			[
+				"logi",
+				"public\\html\\css\\login_window.css"
+			],
+			[
+				"modal",
+				"public\\html\\css\\modal_window.css"
+			],
+			[
+				"login.cs",
+				"public\\html\\css\\login_window.css"
+			],
+			[
+				"login-wi",
+				"private\\templates\\login-window.php"
+			],
+			[
 				"accounts",
 				"private\\templates\\compare-accounts-table.php"
 			],
@@ -1163,10 +1080,6 @@
 			[
 				"wait/get",
 				"public\\resources\\routes\\api\\file\\download\\wait\\get.php"
-			],
-			[
-				"download",
-				"public\\html\\download.php"
 			],
 			[
 				"storage",
@@ -1333,18 +1246,6 @@
 				"public\\html\\js\\config\\config.js"
 			],
 			[
-				"inde",
-				"public\\html\\index.php"
-			],
-			[
-				"fonte",
-				"public\\html\\fontello\\css\\fontello.css"
-			],
-			[
-				"modal",
-				"public\\html\\css\\modal_window.css"
-			],
-			[
 				"index.p",
 				"public\\html\\index.php"
 			],
@@ -1449,16 +1350,8 @@
 				"private\\config\\paths.php"
 			],
 			[
-				"moda",
-				"public\\html\\js\\modal_window.js"
-			],
-			[
 				"upload_win",
 				"public\\html\\css\\index\\upload_window.css"
-			],
-			[
-				"login-wi",
-				"private\\templates\\login-window.php"
 			],
 			[
 				"login_wi",
@@ -1523,10 +1416,6 @@
 			[
 				"upload.js",
 				"public\\html\\js\\index\\upload_window.js"
-			],
-			[
-				"logi",
-				"private\\templates\\login-btn.php"
 			],
 			[
 				"conf",

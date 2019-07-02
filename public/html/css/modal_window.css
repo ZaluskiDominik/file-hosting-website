@@ -36,6 +36,7 @@
 	right: 3px;
 	top: 3px;
 	line-height: 1ch;
-	padding-bottom: 3px;
+	padding-bottom: 3px !important;
 	font-size: 20px;
+	margin: 0 !important;
 }

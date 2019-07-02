@@ -55,22 +55,18 @@ class Download
         $maxNumDownloads = $account->getDownloadConstraints()['maxNum'];
         
         $info = ( new Download() )->getNumDownloadsLimitInfo();
-        // var_dump($info);
-        // echo time();
         //number of seconds to wait before next download can be started
         $numWaitSeconds = ( $info['num'] == 0 ) ? 0 : 
             $GLOBALS['downloadConf']['MAX_NUM_DURATION'] 
             - ( time() - strtotime($info['startedAt']) );
-        var_dump($info['startedAt']);
-        var_dump(date("D M j G:i:s T Y", time()));
-        var_dump(date("D M j G:i:s T Y", strtotime($info['startedAt'])));
+        
         return ( $maxNumDownloads !== null && $info['num'] >= $maxNumDownloads );
     }
 
     //inserts new entry to downloads table
     public function insertDownloadToDB(string $filePath)
     {
-        $db = connectToDB();
+        $db = connectToDB();        
         $stmt = $db->prepare("INSERT INTO downloads
             (owner_id, owner_ip, upload_id)
             VALUES(?, ?, (SELECT id FROM uploaded_files WHERE path = ?))");

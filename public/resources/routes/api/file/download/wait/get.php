@@ -2,6 +2,7 @@
 /*Returns json with info how much user have to wait before starting next download
 JSON:
 {
+    mustWait
     secondsToWait
 }
 */
@@ -13,6 +14,9 @@ startSession();
 header('Content-type:application/json;charset=utf-8');
 
 $timeToWait = 0;
-( new Download() )->isNumDownloadsLimitReached($timeToWait);
+$wait = ( new Download() )->isNumDownloadsLimitReached($timeToWait);
 
-echo json_encode([ 'secondsToWait' => $timeToWait ]);
+echo json_encode([
+    'mustWait' =>  $wait,
+    'secondsToWait' => $timeToWait 
+]);

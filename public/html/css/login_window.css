@@ -1,15 +1,48 @@
-#loginWindow
+.loginWnd
 {
-	width: 60%;
-	max-width: 600px !important;
-	min-width: 350px !important;
+    background-color: #eeeeeeee !important;
+	width: 90%;
+	max-width: 450px !important;
 	text-align: center;
+    min-height: 100px;
+}
+
+.loginWnd > h4
+{
+    margin: 0 20px 20px 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid skyblue;
+    font-size: 24px;
+    letter-spacing: 8px;
+    color: #777;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #555;
+}
+
+.loginWnd label
+{
+    font-size: 18px;
 }
 
 #loginErr
 {
-	padding: 5px 0 5px 0;
 	color: red;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 14px;
+    visibility: hidden;
+    height: 16px;
+    margin-top: 4px;
+}
+
+.loginWnd form button
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.loginWnd form button::before
+{
+    font-family: "fontello";
+    content: '\e802';
+    margin-right: 8px;
 }

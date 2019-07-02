@@ -31,7 +31,7 @@ let download = {
     {
         $.get(API_PATH + '/file/download/wait/get.php')
         .done( (json) => {
-            if (json.secondsToWait != 0)
+            if (json.mustWait)
                 this.openUsedAllNumOfDownloadsAlert(json.secondsToWait);
             else
                 this.download();

@@ -1,3 +1,6 @@
 
 .icon-upload-cloud-outline:before { content: '\e800'; } /* '' */
 .icon-download:before { content: '\e801'; } /* '' */
+.icon-login:before { content: '\e802'; } /* '' */
+.icon-key:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */
