@@ -1,3 +1,8 @@
+<?php 
+require_once($phpPaths['PHP'] . '/restrict-functions.php');
+startSession();
+?>
+
 <header>
     <nav id="nav" class="navbar navbar-expand-xl navbar-light bg-light">
         <button class="navbar-toggler" type="button"
@@ -25,7 +30,7 @@
         </div>
 
         <div>
-            <div id="storageInfo" data-wenk-pos="bottom">
+            <div id="storageInfo">
                 <div></div>
                 <span>
                     Wykorzystane
@@ -35,7 +40,7 @@
                     GB
                 </span>
             </div>
-            <?php           
+            <?php
             if ( isset($_SESSION['user']) )
             {
                 //if user is logged in display profile picture and user's name

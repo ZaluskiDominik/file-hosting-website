@@ -44,7 +44,10 @@ $file = UserStorage::getFileData($_GET['file']);
         Pobranie pliku możliwe za <span></span>
     </div>
 
-    <?php include($phpPaths['TEMPLATES'] . '/compare-accounts-table.php'); ?>
+    <?php 
+    include($phpPaths['TEMPLATES'] . '/compare-accounts-table.php'); 
+    include($phpPaths['TEMPLATES'] . '/login-window.php');
+    ?>
 </body>
 
 </html>

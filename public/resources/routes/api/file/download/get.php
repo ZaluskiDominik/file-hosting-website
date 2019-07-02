@@ -5,6 +5,8 @@ require_once($phpPaths['PHP'] . '/download.php');
 require_once($phpPaths['PHP'] . '/restrict-functions.php');
 require_once($phpPaths['PHP'] . '/upload/storage.php');
 
+startSession();
+
 //check if file parameter of GET is not empty
 if (empty($_GET['file']))
     badRequest('No file given!');

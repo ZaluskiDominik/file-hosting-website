@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="css/index/why_us_section.css"/>
 	<link rel="stylesheet" href="css/index/compare_accounts_section.css"/>
 	<link rel="stylesheet" href="css/index/upload_button.css"/>
-	<link rel="stylesheet" href="css/modal_window.css"/>
 	<link rel="stylesheet" href="css/index/upload_window.css"/>
 	<link rel="stylesheet" href="css/index/upload_alert.css"/>
 	<link rel="stylesheet" href="css/compare_accounts_table.css"/>

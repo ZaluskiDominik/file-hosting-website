@@ -94,8 +94,7 @@
 
 #storageInfo
 {
-	margin-right: 15px;
-	cursor: pointer;
+	margin-right: 20px;
 }
 
 #storageInfo > span
@@ -109,4 +108,84 @@
 #storageInfo > span > span
 {
 	font-weight: bold;
+}
+
+.profile
+{
+	text-align: center;
+}
+
+.profileIconWrapper
+{
+	display: inline-block;
+	position: relative;
+	border: 2px solid lightgray;
+	box-shadow: 0 0 2px black;
+	border-radius: 50%;
+	padding: 5px;
+	cursor: pointer;
+	transition: background-color 1s;
+	margin-bottom: -2px;
+}
+
+.profileIconWrapper:hover
+{
+	background-color: #00aa0033;
+}
+
+.profileIconWrapper i
+{
+	display: inline-block;
+	transition: transform 1s;	
+}
+
+.profileIconWrapper:hover i
+{
+	transform: scale(1.2);
+}
+
+.profileName
+{
+	display: inline-block;
+	font-size: 15px;
+	color: #444;
+	font-weight: bold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 140px;
+	overflow: hidden;
+}
+
+.profileDropdown
+{
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 100%);
+	background-color: white;
+	box-shadow: 0 0 4px black;
+	border-radius: 6px;
+}
+
+.profileIconWrapper:hover .profileDropdown
+{
+	display: block;
+}
+
+.profileDropdown a
+{
+	display: block;
+	text-decoration: none;
+	color: #666;
+	text-shadow: 1px 1px 1px lightgray;
+	padding: 6px 10px 6px 10px;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+.profileDropdown a:hover
+{
+	color: #444;
+	text-shadow: 1px 1px 1px #aaa;
 }

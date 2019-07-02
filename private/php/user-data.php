@@ -15,7 +15,6 @@ class UserData
 		$inst = new UserData();
 		//guest has no data only ip
 		$inst->userData = [
-			'login' => null,
 			'name' => null,
 			'surname' => null,
 			'email' => null,
@@ -37,7 +36,6 @@ class UserData
 
 	//returns array containing user's data
 	/*[
-		login
 		name
 		surname
 		email
@@ -73,7 +71,6 @@ class UserData
 	private function formatUserData(array $userStmt)
 	{
 		$this->userData = [
-			'login' => $userStmt['login'],
 			'name' => $userStmt['name'],
 			'surname' => $userStmt['surname'],
 			'email' => $userStmt['email'],

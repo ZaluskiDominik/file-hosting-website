@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="css/navbar.css"/>
 <link rel="stylesheet" href="css/popover.css"/>
 <link rel="stylesheet" href="css/login_window.css"/>
+<link rel="stylesheet" href="css/modal_window.css"/>
 
 <!-- js scripts -->
 <script src="js/byte_prefixes.js"></script>

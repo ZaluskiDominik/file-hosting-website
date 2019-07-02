@@ -23,6 +23,15 @@ function allowLoggedInOnly()
 	}
 }
 
+//exit script with error message and 400 html code if one of string names
+//in postNames array does not exist in POST superglobal
+function postParamsExist(array $postNames)
+{
+	foreach ($postNames as $post)
+		if ( !isset($_POST[$post]) )
+			badRequest('POST parameter \'' . $post . '\' is required!');
+}
+
 //sets 400 html code and exits script echoing error msg
 function badRequest(string $msg)
 {

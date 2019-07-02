@@ -4,7 +4,6 @@ Returned json:
 {
 	//if one of following fields doesn't exists in db for client then field equals null
 	user : {
-		login
 		name
 		surname
 		email
