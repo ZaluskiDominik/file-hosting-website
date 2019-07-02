@@ -11,8 +11,7 @@ Below is an configuration file of vhost for this web app that needs to be put in
 	ServerName upload-it.pl
 	ServerAlias www.upload-it.pl
 
-	root directory of web application - should point to public directory(<b>*</b>)
-	
+	#root directory of web application - should point to public directory(<b>*</b>)
 	DocumentRoot C:\xampp\htdocs\file-hosting-website\public
 	#turn on errors displaying
 	Php_flag display_errors On
@@ -32,14 +31,15 @@ Below is an configuration file of vhost for this web app that needs to be put in
 	#path to php error logs file(<b>*</b>)
 	Php_value error_log "C:\xampp\htdocs\file-hosting-website\private\logs\php\error.txt"	
 
-	<Directory C:\xampp\htdocs\file-hosting-website\public>
+	
+	&lt;Directory <b>C:\xampp\htdocs\file-hosting-website\public</b>&gt;
 		#disable index of
 		Options Includes FollowSymlinks
 		#redirect root url to index page
 		RedirectMatch ^/$ /html
-	</Directory>
+	&lt;/Directory&gt;
 
-	#tunn on file uploads
+	#turn on file uploads
 	Php_flag file_uploads On
 	#max size of one file
 	Php_value upload_max_filesize 40G
