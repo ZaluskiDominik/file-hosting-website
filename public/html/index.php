@@ -14,6 +14,7 @@
 	<script src="js/index/upload_btn.js"></script>
 	<script src="js/index/upload_window.js"></script>
 	<script src="js/index/upload_alert.js"></script>
+	<script src="js/index/scroll_compare_accounts.js"></script>
 
 	<!-- upload plugin -->
 	<script src=<?php echo $htmlPaths['LIB'] . 
@@ -35,12 +36,8 @@
 		<h1>Wrzucaj pliki całkowicie za darmo!</h1>
 		<div>
 			<div id="uploadTextFrame">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Wrzucaj i pobieraj pliki kiedy checesz i jak chcesz, bez zbędnych reklam i
+				haczyków. Szanujemny Twój czas, dlatego zebraliśmy dla Ciebie wszystkie korzyści z posiadania darmowego konta jak i konta premium w naszym serwisie, i zestawilyśmy je w <a href="">tabeli</a>. Nie chcesz zakładać konta? Nie ma sprawy, rejestracja nie jest wymagana by korzystać z naszych usług, choć daje Ci dodatkowe korzyści.
 			</div>
 
 			<div id="uploadBtnWrapper">
@@ -118,6 +115,5 @@
 	include($phpPaths['TEMPLATES'] . '/login-window.php'); 
 	include($phpPaths['TEMPLATES'] . '/upload-window.php'); 
 	?>
-
 </body>
 </html>

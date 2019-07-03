@@ -28,8 +28,6 @@
 {
 	min-width: 300px;
 	width: 50%;
-	display: flex;
-	align-items: center;
 	padding: 10px;
 	border-radius: 12px;
 	border: 2px solid white;
@@ -37,4 +35,11 @@
 	text-align: justify;
 	background-color: rgba(0, 0, 0, 0.3);
 	margin-bottom: 15px;
+}
+
+#uploadTextFrame a
+{
+	color: #1e90ff;
+	text-shadow: 1px 1px 1px #444;
+	letter-spacing: 1px;
 }

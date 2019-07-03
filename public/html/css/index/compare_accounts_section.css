@@ -1,7 +1,5 @@
 #compareAccountsSection
 {
-    height: 100%;
-    position: relative;
     background-image: url('/resources/img/accounts_comp.jpg')
 }
 
@@ -24,7 +22,16 @@
 {
     display: inline-block;
     position: relative;
-    top: calc(50% - 50px);
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 600px) 
+{
+    #accountsTableWrapper  
+    {
+        left: 0;
+        transform: none;
+    }
 }
