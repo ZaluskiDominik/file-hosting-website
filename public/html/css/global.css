@@ -6,6 +6,11 @@ html, body
 	font-size: 18px;
 }
 
+body
+{
+	overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6, ul, ol, button
 {
 	margin: 0;
@@ -15,10 +20,20 @@ h1, h2, h3, h4, h5, h6, ul, ol, button
 
 section
 {
+	overflow-x: auto;
+	max-width: 100vw;
 	box-sizing: border-box;
 	min-height: 100vh;
 	padding: 10px;
 	padding-top: 20px;
+}
+
+@supports (-ms-ime-align: auto) 
+{
+  	section 
+  	{
+     	overflow-x: hidden;  
+  	}
 }
 
 h1

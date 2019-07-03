@@ -14,6 +14,7 @@
 	<script src="js/index/upload_btn.js"></script>
 	<script src="js/index/upload_window.js"></script>
 	<script src="js/index/upload_alert.js"></script>
+	<script src="js/index/scroll_compare_accounts.js"></script>
 
 	<!-- upload plugin -->
 	<script src=<?php echo $htmlPaths['LIB'] . 
@@ -35,12 +36,9 @@
 		<h1>Wrzucaj pliki całkowicie za darmo!</h1>
 		<div>
 			<div id="uploadTextFrame">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Wrzucaj i pobieraj pliki kiedy checesz i jak chcesz, bez zbędnych reklam i
+				haczyków. Szanujemy Twój czas, dlatego zebraliśmy dla Ciebie wszystkie korzyści z posiadania darmowego konta jak i konta premium w naszym serwisie, i zestawilyśmy je w <a href="">tabeli</a>. Nie chcesz zakładać konta? Nie ma sprawy, rejestracja nie jest wymagana by korzystać z naszych usług, choć daje Ci dodatkowe korzyści.<br>
+				<b>Kliknij przycisk po prawej stronie by zacząć...</b>
 			</div>
 
 			<div id="uploadBtnWrapper">
@@ -64,10 +62,9 @@
 				<div class="pros">
 					<div class="prosGroup">
 						<span>
-							Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.
+							Nasz serwis jest całkowicie darmowy, nie zawiera żadnych
+							reklam i wyskakujących okienek. Jako niezarejestrowany użytkownik masz do wykorzystania 10GB przestrzeni dyskowej na
+							pliki. Jeżeli założysz konto zwiększymy tą wartość do 15GB!
 						</span>
 						<div class="number ml-3">1</div>
 					</div>
@@ -79,10 +76,8 @@
 					<div class="prosGroup">
 						<div class="number mr-3">2</div>
 						<span>
-							Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.
+							Prosty i intuicyjny layout serwisu umożliwia szybką pracę
+							z uploadem Twoich plików na dysk. Jako niezarejestrowany użytkowik możesz przesyłać aż do 10 plików naraz! Po rejestracji podwoimy tą ilość!
 						</span>
 					</div>
 				</div>
@@ -92,10 +87,9 @@
 				<div class="pros">
 					<div class="prosGroup">
 						<span>
-							Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur.
+							Mechanizm Drag&drop pozwala na bezpośrednie przerzucanie
+							plików z pulpitu na dysk. Koniec z uciążliwą nawigacją
+							w menadżerze plików!
 						</span>
 						<div class="number ml-3">3</div>
 					</div>
@@ -118,6 +112,5 @@
 	include($phpPaths['TEMPLATES'] . '/login-window.php'); 
 	include($phpPaths['TEMPLATES'] . '/upload-window.php'); 
 	?>
-
 </body>
 </html>
