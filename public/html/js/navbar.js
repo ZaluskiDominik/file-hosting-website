@@ -12,3 +12,7 @@ let navbar = {
 		$("#storageUsedSize").html(usedSizeGB);
 	}
 };
+
+$(document).ready( () => {
+	navbar.updateStorageSpaceUsage();
+});

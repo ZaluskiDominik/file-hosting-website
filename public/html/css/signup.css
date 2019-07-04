@@ -1,6 +1,6 @@
 body
 {
-    background-image: url("/resources/img/signup_bcg.png");
+    background-image: url("/resources/img/bcg.png");
 }
 
 #signupFormWrapper h1
@@ -32,6 +32,17 @@ body
 #signupFormWrapper div
 {
     text-align: left;
+}
+
+#emailInUse
+{
+    display: none;
+    text-align: center !important;
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: calc(-1rem + 5px);
+    margin-bottom: 1rem;
 }
 
 .notValid

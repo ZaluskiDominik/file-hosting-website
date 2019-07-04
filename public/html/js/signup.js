@@ -53,14 +53,20 @@ let signup = {
         });
     },
 
+    //adds notValid class to input(red border)
+    setNotValidClass : function(input)
+    {
+        if ( !$(input).hasClass("notValid") )
+            $(input).addClass("notValid");
+    },
+
     //marks input field as not valid - validation of content not passed
     //opens warning popover with validation error message
     //changes color of border to red
     markNotValid : function(input, msg)
     {
         this.openBadInputPopover(input, msg);
-        if ( !$(input).hasClass("notValid") )
-            $(input).addClass("notValid");
+        this.setNotValidClass(input);
     },
 
     //removes effects of markNotValid function
@@ -150,7 +156,10 @@ let signup = {
                 $("#signupFormWrapper form").serialize())
             .done( (json) => {
                 if (json.emailInUse)
-                    console.log();
+                {
+                    $("#emailInUse").show();
+                    this.setNotValidClass($("#email")[0]);
+                }
                 else
                     window.location = "index.php";
             })

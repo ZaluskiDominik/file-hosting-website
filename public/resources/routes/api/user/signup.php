@@ -3,17 +3,21 @@ header('Content-type:application/json;charset=utf-8');
 
 require_once($phpPaths['PHP'] . '/login.php');
 require_once($phpPaths['PHP'] . '/signup.php');
+require_once($phpPaths['PHP'] . '/signup-validation.php');
 startSession();
 
+//check if all post parameters were given
+postParamsExist([ 'email', 'name', 'surname', 'password' ]);
 
+//retrieve POST parameters and sanitize them against xss attack
+$email = htmlspecialchars($_POST['email']);
+$name = htmlspecialchars($_POST['name']);
+$surname = htmlspecialchars($_POST['surname']);
+$password = htmlspecialchars($_POST['password']);
 
-
-
-//retrieve POST parameters
-$email = $_POST['email'];
-$name = $_POST['name'];
-$surname = $_POST['surname'];
-$password = $_POST['password'];
+//validate post parameters
+$valid = new SignupValidation($email, $name, $surname, $password);
+$valid->validate();
 
 //if given email already exists in db, don't proceed with signu up
 //returns json with info that account couldn't be created

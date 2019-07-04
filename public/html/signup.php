@@ -23,6 +23,7 @@
                     placeholder="email@example.com">
                 </div>
             </div>
+            <div id="emailInUse">Podany email jest już przypisany do innego konta!</div>
 
             <div class="form-group row">
                 <label for="name" class="col-sm-3 col-form-label">Imię</label>
@@ -51,7 +52,7 @@
                     Powtórz hasło
                 </label>
                 <div class="col-sm-9">
-                    <input id="confirmPassword" name="confirmPassword"
+                    <input id="confirmPassword"
                     type="password" class="form-control">
                 </div>
             </div>
