@@ -38,3 +38,9 @@ function badRequest(string $msg)
     http_response_code(400);
     die($msg);
 }
+
+//sets 400 html response code and exits script with message
+function notValid(string $varName)
+{
+	badRequest('Parameter \'' . $varName . '\' is not valid!');
+}

@@ -1,0 +1,52 @@
+body
+{
+    background-image: url("/resources/img/bcg.png");
+}
+
+#signupFormWrapper h1
+{
+    margin: -10px 0 40px 0;
+    color: #666;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 2px #aaa;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+#signupFormWrapper
+{
+    background-color: white;
+    width: 50%;
+    max-width: 800px;
+    min-width: 400px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#signupFormWrapper div
+{
+    text-align: left;
+}
+
+#emailInUse
+{
+    display: none;
+    text-align: center !important;
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: calc(-1rem + 5px);
+    margin-bottom: 1rem;
+}
+
+.notValid
+{
+    box-shadow: 0 0 3px red !important;
+    border-color: red !important;
+}

@@ -17,12 +17,19 @@ function validateInput()
 function getUserIdByCredentials(string $email, string $password)
 {
     $db = connectToDB();
-    $stmt = $db->prepare("SELECT id FROM users
-        WHERE email = ? AND password_hash = ?");
-    $stmt->execute([ $email, $password ]);
+    //get password hash by searching email
+    $stmt = $db->prepare("SELECT id, password_hash FROM users
+        WHERE email = ?");
+    $stmt->execute([ $email ]);
     $user = $stmt->fetch();
 
-    return ( $user === false ) ? null : $user['id'];
+    //if no user with that email was found return null
+    if ($user === false)
+        return null;
+
+    $hash = $user['password_hash'];
+    //if hash and password are compatible return user id else null
+    return ( password_verify($password, $hash) ) ? $user['id'] : null;
 }
 
 //login user to system

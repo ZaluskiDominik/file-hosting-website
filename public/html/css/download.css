@@ -1,6 +1,7 @@
 body
 {
     text-align: center;
+    background-image: url('/resources/img/bcg.png');
 }
 
 .compareAccountsTable
@@ -25,6 +26,7 @@ body
 .downloadBtn
 {
     outline: none;
+    padding: 0;
 }
 
 .downloadBtn > a
@@ -34,6 +36,7 @@ body
     height: 100%;
     text-decoration: none;
     color: inherit;
+    padding: 8px 14px;
 }
 
 #usedAllDownloadsAlert
