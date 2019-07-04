@@ -20,12 +20,19 @@ startSession();
         <div class="collapse navbar-collapse" id="navOptions">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href=<?php echo '"' . $htmlPaths['PAGES'] . 
-                    '/index.php"'; ?> >Start</a>
+                    <a class="nav-link" href="index.php">
+                        Start
+                    </a>
                 </li>
+                
                 <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Rejestracja</a></li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.php">
+                        Rejestracja
+                    </a>
+                </li>
             </ul>
         </div>
 

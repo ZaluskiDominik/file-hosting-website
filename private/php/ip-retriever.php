@@ -1,6 +1,7 @@
 <?php
 //returns ip address of a client or null if ip couldn't be retrieved
-function getClientIp() {
+function getClientIp() 
+{
     $ipaddress = null;
     if (getenv('HTTP_CLIENT_IP'))
         $ipaddress = getenv('HTTP_CLIENT_IP');
