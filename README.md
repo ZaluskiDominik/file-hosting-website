@@ -2,7 +2,9 @@
 Website offering file hosting services
 
 <h1>How to run?</h1>
-Clone repository and move it to your apache root server directory.<br>
+Clone repository and move it to your apache root server directory.
+
+<h2>Apache configuration</h2>
 Below is an configuration file of vhost for this web app that needs to be put inside one of apache's configuration files. You need to edit it with appropriate absolute paths of your system(Directives where path should be edited are marked by <b>*</b> and have bold font).<br>
 It's also important that you set the same timezone in this file as you have on php server and mysql server. Those timezones need to be the same.
 <br><br>
@@ -52,3 +54,11 @@ It's also important that you set the same timezone in this file as you have on p
 	Php_value date.timezone Europe/Warsaw
 &lt;/VirtualHost&gt;
 </pre>
+
+Website will be accessible by 127.0.0.3 IP address.
+
+<h2>Database configuration</h2>
+First import file_upload.sql file, which contains schema of all neede tables by web app, to your mysql server.
+Next edit database.php file in private/config folder. You have to specify hostname where your mysql server run, login, password and name under which file_upload.sql file was imported by you.
+
+<h1>Screenshoots</h1>
