@@ -58,7 +58,7 @@ It's also important that you set the same timezone in this file as you have on p
 Website will be accessible by 127.0.0.3 IP address.
 
 <h2>Database configuration</h2>
-First import file_upload.sql file, which contains schema of all neede tables by web app, to your mysql server.
+First import file_upload.sql file, which contains schema of all needed tables by web app, to your mysql server.
 Next edit database.php file in private/config folder. You have to specify hostname where your mysql server run, login, password and name under which file_upload.sql file was imported by you.
 
 <h1>Screenshoots</h1>
