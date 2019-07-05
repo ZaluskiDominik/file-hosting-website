@@ -62,3 +62,7 @@ First import file_upload.sql file, which contains schema of all needed tables by
 Next edit database.php file in private/config folder. You have to specify hostname where your mysql server run, login, password and name under which file_upload.sql file was imported by you.
 
 <h1>Screenshoots</h1>
+<img src="screenshoots/1.jpg">
+<img src="screenshoots/2.jpg">
+<img src="screenshoots/3.jpg">
+<img src="screenshoots/4.jpg">
