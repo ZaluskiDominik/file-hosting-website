@@ -5,14 +5,14 @@ let uploadBtn = {
 	//whether mouse's cursor is over the upload button
 	mouseIn : false,
 	//number of currently animated border ring
-	currRingNr : -1,
+	currRingNr : 0,
 	timer : null,
+	msTimeBetween : 300,
 
 	//appears rings around upload button
 	mouseInAnimation : function()
 	{
 		this.mouseIn = true;
-		this.currRingNr++;
 		this.animation(1);
 	},
 
@@ -20,42 +20,55 @@ let uploadBtn = {
 	mouseOutAnimation : function()
 	{
 		this.mouseOut = false;
-		this.currRingNr--;
 		this.animation(-1);
 	},
 
-	//sets timeout after which next border ring will be activated/disactivated 
-	setTimeout : function(callback)
+	setInterval : function(callback)
 	{
-		if ( this.timer !== null )
-			clearTimeout(this.timer);
-		this.timer = setTimeout(callback.bind(this), 300)
+		if (this.timer !== null)
+			clearInterval(this.timer);
+		this.timer = setInterval(callback, this.msTimeBetween);
 	},
 
-	//generic upload button animation(appears rings or disappears them)
+	clearInterval : function()
+	{
+		clearInterval(this.timer);
+		this.timer = null;
+	},
+
+	//when step is 1 appears next rings around upload btn
+	//when step is -1 disappears them
 	animation : function(step)
 	{
-		let divs = [ $("#uploadBtn"), $("#uploadBtnInnerOutline"), $("#uploadBtnOuterOutline") ];
-		let activeClasses = [ "activeUploadBtn", "activeUploadBtnInnerOutline", "activeUploadBtnOuterOutline" ];
+		//array of next rings to be displayed
+		let rings = [ $("#uploadBtn"), $("#uploadBtnRing1"), $("#uploadBtnRing2") ];
+		//array of classes that actually disply rings, they match rings order
+		let activeClasses = [ "activeUploadBtn", "activeUploadBtnRing1", 
+			"activeUploadBtnRing2" ];
 
-		let animationRecursion = () => {
-			let index = this.currRingNr;
-			//if index is out of range
-			if ( index < 0 || index > 2 )
+		let animationHelper = () => {
+			//if ring index is out of range clear Interval and exit
+			if ( this.currRingNr + step < 0 || this.currRingNr + step > 2 )
+			{
+				this.clearInterval();
 				return;
+			}
 
-			//if step is is 1 then set current div to active
+			let isActive = rings[this.currRingNr]
+				.hasClass(activeClasses[this.currRingNr]);
+
+			//advance in animation
+			if ( (step == 1 && isActive) || (step == -1 && !isActive) )
+				this.currRingNr += step;
+
+			//if step is 1 then set current ring to active
 			if ( step == 1 ) 
-				divs[index].addClass( activeClasses[index] );
+				rings[this.currRingNr].addClass( activeClasses[this.currRingNr] );
 			else
-				divs[index].removeClass( activeClasses[index] );
-
-			this.currRingNr += step;
-			//set timer when next border will be triggered
-			this.setTimeout(animationRecursion);
+				rings[this.currRingNr].removeClass( activeClasses[this.currRingNr] );
 		};
 
-		animationRecursion();
+		this.setInterval(animationHelper.bind(this));
 	},
 
 	//adds event listeners for mouseover and mouseleave event

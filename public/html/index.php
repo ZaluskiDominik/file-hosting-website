@@ -37,20 +37,17 @@
 		<div>
 			<div id="uploadTextFrame">
 				Wrzucaj i pobieraj pliki kiedy checesz i jak chcesz, bez zbędnych reklam i
-				haczyków. Szanujemy Twój czas, dlatego zebraliśmy dla Ciebie wszystkie korzyści z posiadania darmowego konta jak i konta premium w naszym serwisie, i zestawilyśmy je w <a href="">tabeli</a>. Nie chcesz zakładać konta? Nie ma sprawy, rejestracja nie jest wymagana by korzystać z naszych usług, choć daje Ci dodatkowe korzyści.<br>
+				haczyków. Szanujemy Twój czas, dlatego zebraliśmy dla Ciebie wszystkie korzyści z posiadania darmowego konta jak i konta premium w naszym serwisie, i zestawilyśmy je w <a href="#">tabeli</a>. Nie chcesz zakładać konta? Nie ma sprawy, rejestracja nie jest wymagana by korzystać z naszych usług, choć daje Ci dodatkowe korzyści.<br>
 				<b>Kliknij przycisk po prawej stronie by zacząć...</b>
 			</div>
 
-			<div id="uploadBtnWrapper">
-				<div class="uploadBtnOutline" id="uploadBtnOuterOutline">
-					<div class="uploadBtnOutline" id="uploadBtnInnerOutline">
-						<button id="uploadBtn" type="button" tabindex="-1">
-							<div id="uploadBtnBcg"></div>
-							<i class="icon-upload-cloud-outline"></i>
-						</button>
-					</div>
+			<div class="uploadBtnRing" id="uploadBtnRing2">
+				<div class="uploadBtnRing" id="uploadBtnRing1">
+					<button id="uploadBtn" type="button" tabindex="-1">
+						<i class="icon-upload-cloud-outline"></i>
+					</button>
 				</div>
-			</div>			
+			</div>
 	</section>
 
 	<section id="whyUsSection">

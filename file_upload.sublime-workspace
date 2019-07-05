@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"ring",
+				"rings"
+			],
+			[
+				"clear",
+				"clearInterval"
+			],
+			[
+				"curr",
+				"currRingNr"
+			],
+			[
+				"time",
+				"timer"
+			],
+			[
+				"trans",
+				"transform\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"bac",
+				"background\tproperty"
+			],
+			[
+				"validate",
+				"validateSurname"
+			],
+			[
+				"vali",
+				"validateEmail"
+			],
+			[
+				"conf",
+				"confirmPass"
+			],
+			[
+				"confirmP",
+				"confirmPassword"
+			],
+			[
 				"mark",
 				"markNotValid"
 			],
@@ -26,10 +78,6 @@
 			[
 				"pass",
 				"passed"
-			],
-			[
-				"clear",
-				"clearNotValid"
 			],
 			[
 				"confirm",
@@ -80,10 +128,6 @@
 				"background-repeat\tproperty"
 			],
 			[
-				"pad",
-				"padding-bottom\tproperty"
-			],
-			[
 				"margi",
 				"margin-top\tproperty"
 			],
@@ -128,20 +172,12 @@
 				"proceedLogin"
 			],
 			[
-				"vali",
-				"validateCredentials"
-			],
-			[
 				"down",
 				"download"
 			],
 			[
 				"num",
 				"numSecondsWait"
-			],
-			[
-				"time",
-				"timeToWait"
 			],
 			[
 				"js",
@@ -184,10 +220,6 @@
 				"replaceIfNull"
 			],
 			[
-				"trans",
-				"translateY"
-			],
-			[
 				"bacgro",
 				"background-image\tproperty"
 			],
@@ -226,10 +258,6 @@
 			[
 				"sum",
 				"sumSize"
-			],
-			[
-				"validate",
-				"validateMaxFileSize"
 			],
 			[
 				"valida",
@@ -486,80 +514,25 @@
 			[
 				"errorsO",
 				"errorsOffHandler"
-			],
-			[
-				"anima",
-				"animation-delay\tproperty"
-			],
-			[
-				"heigh",
-				"height\tproperty"
-			],
-			[
-				"php",
-				"phpPaths"
-			],
-			[
-				"occ",
-				"occupiedSize"
-			],
-			[
-				"a",
-				"break-all\tword-break"
-			],
-			[
-				"wrap",
-				"word-wrap\tproperty"
-			],
-			[
-				"ro",
-				"rowId"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "public/html/signup.php",
+			"file": "public/html/index.php",
 			"settings":
 			{
-				"buffer_size": 2407,
+				"buffer_size": 3703,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/html/css/signup.css",
+			"file": "public/html/css/index/upload_button.css",
 			"settings":
 			{
-				"buffer_size": 898,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/html/js/signup.js",
-			"settings":
-			{
-				"buffer_size": 5328,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/resources/routes/api/user/signup.php",
-			"settings":
-			{
-				"buffer_size": 719,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "private/php/signup-validation.php",
-			"settings":
-			{
-				"buffer_size": 7,
+				"buffer_size": 923,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -628,6 +601,18 @@
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_button.css",
+		"/C/xampp/htdocs/file-hosting-website/public/html/js/index/upload_btn.js",
+		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_section.css",
+		"/C/xampp/htdocs/file-hosting-website/public/html/signup.php",
+		"/C/xampp/htdocs/file-hosting-website/public/html/js/data/user.js",
+		"/C/xampp/htdocs/file-hosting-website/public/html/js/data/account.js",
+		"/C/xampp/htdocs/file-hosting-website/public/html/js/navbar.js",
+		"/C/xampp/htdocs/file-hosting-website/private/php/signup-validation.php",
+		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/signup.php",
+		"/C/xampp/htdocs/file-hosting-website/private/php/restrict-functions.php",
+		"/C/xampp/htdocs/file-hosting-website/public/html/css/signup.css",
+		"/C/xampp/htdocs/file-hosting-website/public/html/js/signup.js",
 		"/C/xampp/htdocs/file-hosting-website/public/html/download.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/download.css",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/download/button.php",
@@ -647,12 +632,10 @@
 		"/C/xampp/htdocs/file-hosting-website/private/templates/login-window.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/compare_accounts_table.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/compare_accounts_section.css",
-		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_section.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/index/scroll_compare_accounts.js",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/navbar.css",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/profile-picture.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/login/logout.php",
-		"/C/xampp/htdocs/file-hosting-website/public/html/js/navbar.js",
 		"/C/xampp/htdocs/file-hosting-website/private/php/error-handler.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/download.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download/get.php",
@@ -660,9 +643,7 @@
 		"/C/xampp/htdocs/file-hosting-website/public/html/fontello/css/fontello.css",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/login/validate.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/login_window.css",
-		"/C/xampp/htdocs/file-hosting-website/public/html/js/data/user.js",
 		"/C/xampp/htdocs/file-hosting-website/private/php/user-data.php",
-		"/C/xampp/htdocs/file-hosting-website/private/php/restrict-functions.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/failed_request.js",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/download.js",
 		"/C/xampp/htdocs/file-hosting-website/private/config/download.php",
@@ -676,7 +657,6 @@
 		"/C/xampp/htdocs/file-hosting-website/private/php/account-data.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/constraints/download/get.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download.php",
-		"/C/xampp/htdocs/file-hosting-website/public/html/js/data/account.js",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/download/file-found.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/config/config.js",
 		"/C/xampp/htdocs/file-hosting-website/private/config/paths.php",
@@ -748,18 +728,11 @@
 		"/C/xampp/htdocs/file_upload/public/resources/routes/api/user/constraints/get.php",
 		"/C/xampp/htdocs/file_upload/public/html/js/config/failed_request.js",
 		"/C/xampp/htdocs/file_upload/public/html/js/config/config.js",
-		"/C/xampp/htdocs/file_upload/private/config/database.php",
-		"/C/xampp/htdocs/file_upload/public/resources/routes/re",
-		"/C/xampp/htdocs/file_upload/private/config/byte-prefixes.php",
-		"/C/xampp/htdocs/file.php",
-		"/C/Users/Taisa/Desktop/shared_kubuntu/apache.conf",
-		"/C/xampp/htdocs/test_laravel/project/resources/views/new-div.blade.php",
-		"/C/xampp/htdocs/test_laravel/project/public/css/index.css",
-		"/C/xampp/htdocs/test_laravel/project/resources/views/index.blade.php"
+		"/C/xampp/htdocs/file_upload/private/config/database.php"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -773,6 +746,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fff",
+			"activeUploadBtnRing1",
+			"activeUploadBtnRing2",
+			"step",
+			"divs",
+			"his",
+			"index",
+			"\t\t\t\tdivs[index].removeClass( activeClasses[index] );\n",
+			"index",
+			"uploadBtn",
+			"subject",
+			"confirmPass",
+			"confirmPassword",
+			"validateEmail",
+			"name",
+			"email",
+			"validateName",
+			"email",
+			"string",
+			"name",
+			"signup",
 			"signup_bcg",
 			"connect",
 			"account_type",
@@ -879,28 +873,7 @@
 			"top",
 			"liggray",
 			"lightgray",
-			"compareAccountsTable",
-			"brown",
-			"inset",
-			"compareAccountsSection",
-			"relative",
-			"accountsTableWrapper",
-			"maxSpeed",
-			"maxStorageSize",
-			"upload",
-			"maxStorageSize",
-			"guest",
-			"Gość",
-			"DownloadLi",
-			"height",
-			"gapV",
-			"openUploadStatusPopover",
-			"alert",
-			"openUploadStatusPopover",
-			"addDownloadLink",
-			"successUpload",
-			"selectSwitchBtn",
-			"initUploadResultsSwitch"
+			"compareAccountsTable"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -919,24 +892,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/html/signup.php",
+					"file": "public/html/index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2407,
+						"buffer_size": 3703,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								809,
-								809
+								1841,
+								1841
 							]
 						],
 						"settings":
@@ -944,148 +917,49 @@
 							"SL.13.region_keys":
 							[
 							],
-							"SL.14.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
 							"SL.15.region_keys":
 							[
-								"sublime_linter.protected_regions"
 							],
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 313.333333333,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/html/css/signup.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 898,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"SL.38.region_keys":
 							[
-								652,
-								652
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 398.0,
+						"translation.y": 638.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "public/html/js/signup.js",
+					"buffer": 1,
+					"file": "public/html/css/index/upload_button.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5328,
+						"buffer_size": 923,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2026,
-								2026
+								492,
+								492
 							]
 						],
 						"settings":
 						{
-							"SL.14.region_keys":
-							[
-							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1019.33333333,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/resources/routes/api/user/signup.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 719,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								175,
-								175
-							]
-						],
-						"settings":
-						{
-							"SL.15.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.20.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "private/php/signup-validation.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7,
-								7
-							]
-						],
-						"settings":
-						{
-							"SL.48.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1144,6 +1018,42 @@
 		"selected_items":
 		[
 			[
+				"upload_b.cs",
+				"public\\html\\css\\index\\upload_button.css"
+			],
+			[
+				"upload_Se",
+				"public\\html\\css\\index\\upload_section.css"
+			],
+			[
+				"inde",
+				"public\\html\\index.php"
+			],
+			[
+				"upload.js",
+				"public\\html\\js\\index\\upload_btn.js"
+			],
+			[
+				"upload",
+				"public\\html\\css\\index\\upload_button.css"
+			],
+			[
+				"navba",
+				"public\\html\\js\\navbar.js"
+			],
+			[
+				"acco",
+				"public\\html\\js\\data\\account.js"
+			],
+			[
+				"user.",
+				"public\\html\\js\\data\\user.js"
+			],
+			[
+				"restr",
+				"private\\php\\restrict-functions.php"
+			],
+			[
 				"downloa",
 				"private\\templates\\download\\button.php"
 			],
@@ -1200,16 +1110,8 @@
 				"public\\html\\css\\global.css"
 			],
 			[
-				"navba",
-				"private\\templates\\navbar.php"
-			],
-			[
 				"config.php",
 				"private\\config\\database.php"
-			],
-			[
-				"acco",
-				"public\\html\\css\\compare_accounts_table.css"
 			],
 			[
 				"gloa",
@@ -1230,10 +1132,6 @@
 			[
 				"uploadS",
 				"public\\html\\css\\index\\upload_section.css"
-			],
-			[
-				"inde",
-				"public\\html\\index.php"
 			],
 			[
 				"navbar.js",
@@ -1290,10 +1188,6 @@
 			[
 				"user/get",
 				"public\\resources\\routes\\api\\user\\data\\get.php"
-			],
-			[
-				"restr",
-				"private\\php\\restrict-functions.php"
 			],
 			[
 				"requ",
@@ -1552,10 +1446,6 @@
 				"public\\html\\css\\alert.css"
 			],
 			[
-				"upload",
-				"private\\php\\upload\\upload-handler.php"
-			],
-			[
 				"custo",
 				"private\\php\\custom-exceptions.php"
 			],
@@ -1612,14 +1502,6 @@
 				"private\\php\\error-handler.php"
 			],
 			[
-				"user.",
-				"public\\html\\js\\data\\user.js"
-			],
-			[
-				"upload.js",
-				"public\\html\\js\\index\\upload_window.js"
-			],
-			[
 				"conf",
 				"private\\config\\config.php"
 			],
@@ -1646,14 +1528,6 @@
 			[
 				"/php/",
 				"private\\php\\account-data.php"
-			],
-			[
-				"conn",
-				"private\\php\\db-connect.php"
-			],
-			[
-				"config/d",
-				"private\\config\\database.php"
 			]
 		],
 		"width": 0.0
