@@ -61,8 +61,8 @@ Website will be accessible by 127.0.0.3 IP address.
 First import file_upload.sql file, which contains schema of all needed tables by web app, to your mysql server.
 Next edit database.php file in private/config folder. You have to specify hostname where your mysql server run, login, password and name under which file_upload.sql file was imported by you.
 
-<h1>Screenshoots</h1>
-<img src="screenshoots/1.jpg">
-<img src="screenshoots/2.jpg">
-<img src="screenshoots/3.jpg">
+<h1>Screenshoots</h1><br><br>
+<img src="screenshoots/1.jpg"><br><br>
+<img src="screenshoots/2.jpg"><br><br>
+<img src="screenshoots/3.jpg"><br><br>
 <img src="screenshoots/4.jpg">
