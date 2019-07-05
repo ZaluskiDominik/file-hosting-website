@@ -601,6 +601,7 @@
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/file-hosting-website/private/config/database.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_button.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/index/upload_btn.js",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_section.css",
@@ -627,7 +628,6 @@
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/why_us_section.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/global.css",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/navbar.php",
-		"/C/xampp/htdocs/file-hosting-website/private/config/database.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/login_window.js",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/login-window.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/compare_accounts_table.css",
@@ -732,7 +732,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.3333333333
 	},
 	"find_in_files":
 	{
@@ -1017,6 +1017,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"databa",
+				"private\\config\\database.php"
+			],
 			[
 				"upload_b.cs",
 				"public\\html\\css\\index\\upload_button.css"
@@ -1524,10 +1528,6 @@
 			[
 				"index.php",
 				"public\\html\\pages\\index.php"
-			],
-			[
-				"/php/",
-				"private\\php\\account-data.php"
 			]
 		],
 		"width": 0.0
