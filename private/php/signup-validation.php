@@ -16,10 +16,34 @@ class SignupValidation
     //returned
     public function validate()
     {
-        $this->validateEmail();
-        $this->validateName();
-        $this->validateSurname();
-        $this->validatePassword();
+        if ( !$this->validateEmail($this->email) )
+            notValid('email');            
+        if ( !$this->validateNameOrSurname($this->name) )
+            notValid('name');
+        if ( !$this->validateNameOrSurname($this->surname) )
+            notValid('surname');        
+        if ( !$this->validatePassword($this->password) )
+            notValid('password');
+    }
+
+    //validates format of an email
+    public static function validateEmail($email)
+    {
+        return is_string($email) && filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+
+    //validates whether name or surname doesn't contain any whitespaces and length < 50
+    public static function validateNameOrSurname($nameOrSurname)
+    {
+        return is_string($nameOrSurname) && !preg_match('/\s+/', $nameOrSurname)
+            && strlen($nameOrSurname) < 50;
+    }
+
+    //validates whether password has at least 8 characters and < 30
+    public static function validatePassword($password)
+    {
+        return is_string($password) && strlen($password) >= 8
+            && strlen($password) < 30;
     }
 
     //PRIVATE SECTION
@@ -28,32 +52,4 @@ class SignupValidation
     private $name;
     private $surname;
     private $password;
-
-    //validates format of an email
-    private function validateEmail()
-    {
-        if ( !filter_var($this->email, FILTER_VALIDATE_EMAIL) )
-            notValid('email');
-    }
-
-    //validates whether name doesn't contain any whitespaces 
-    private function validateName()
-    {
-        if (preg_match('/\s+/', $this->name))
-            notValid('name');
-    }
-
-    //validates whether surname doesn't contain any whitespaces     
-    private function validateSurname()
-    {
-        if (preg_match('/\s+/', $this->surname))
-            notValid('surname');        
-    }
-
-    //validates whether password has at least 8 characters
-    private function validatePassword()
-    {
-        if (strlen($this->password) < 8)
-            notValid('password');
-    }
 }

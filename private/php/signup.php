@@ -14,7 +14,7 @@ function emailExistsInDB(string $email)
     return ( $stmt->fetchColumn() ) ? true : false;
 }
 
-//sings up user, adds his/her data to users db table
+//signs up user, adds his/her data to users db table
 //returns id of added user
 function signup(string $email, string $name, string $surname, string $pass)
 {
