@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"pass",
+				"password"
+			],
+			[
+				"name",
+				"nameOrSurname"
+			],
+			[
+				"php",
+				"phpPaths"
+			],
+			[
 				"ring",
 				"rings"
 			],
@@ -74,10 +86,6 @@
 			[
 				"http_re",
 				"http_response_code"
-			],
-			[
-				"pass",
-				"passed"
 			],
 			[
 				"confirm",
@@ -506,34 +514,33 @@
 			[
 				"var",
 				"var_dump"
-			],
-			[
-				"upda",
-				"updateUserDataInDB"
-			],
-			[
-				"errorsO",
-				"errorsOffHandler"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "public/html/index.php",
+			"file": "private/php/download.php",
 			"settings":
 			{
-				"buffer_size": 3703,
+				"buffer_size": 3290,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "private/php/signup-validation.php",
+			"settings":
+			{
+				"buffer_size": 1678,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/html/css/index/upload_button.css",
+			"file": "private/php/login.php",
 			"settings":
 			{
-				"buffer_size": 923,
-				"encoding": "UTF-8",
+				"buffer_size": 1306,
 				"line_ending": "Windows"
 			}
 		}
@@ -551,6 +558,10 @@
 		[
 			[
 				"rename",
+				"Rename File"
+			],
+			[
+				"renam",
 				"Rename File"
 			],
 			[
@@ -589,20 +600,21 @@
 		"/C/xampp/htdocs/file-hosting-website/public",
 		"/C/xampp/htdocs/file-hosting-website/public/html",
 		"/C/xampp/htdocs/file-hosting-website/public/resources",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/constraints",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/constraints/download",
 		"/C/xampp/htdocs/file-hosting-website/private",
-		"/C/xampp/htdocs/file-hosting-website/private/php",
-		"/C/xampp/htdocs/file-hosting-website/private/templates"
+		"/C/xampp/htdocs/file-hosting-website/private/php"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/file-hosting-website/private/config/database.php",
+		"/C/xampp/htdocs/file-hosting-website/tests/unit/signupValidationTest.php",
+		"/C/xampp/htdocs/file-hosting-website/tests/unit/accountDataTest.php",
+		"/C/xampp/htdocs/file-hosting-website/private/php/account-data.php",
+		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/login/validate.php",
+		"/C/xampp/htdocs/file-hosting-website/test-loader.php",
+		"/C/xampp/htdocs/file-hosting-website/phpunit.xml",
+		"/C/xampp/htdocs/file-hosting-website/private/php/compare-accounts-table-content.php",
+		"/C/xampp/htdocs/file-hosting-website/public/html/index.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_button.css",
+		"/C/xampp/htdocs/file-hosting-website/private/config/database.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/index/upload_btn.js",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_section.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/signup.php",
@@ -624,7 +636,6 @@
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/data/get.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/popover.js",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/head.php",
-		"/C/xampp/htdocs/file-hosting-website/public/html/index.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/why_us_section.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/global.css",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/navbar.php",
@@ -641,7 +652,6 @@
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download/get.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/index/upload_window.css",
 		"/C/xampp/htdocs/file-hosting-website/public/html/fontello/css/fontello.css",
-		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/login/validate.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/login_window.css",
 		"/C/xampp/htdocs/file-hosting-website/private/php/user-data.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/js/failed_request.js",
@@ -650,11 +660,9 @@
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download/wait/get.php",
 		"/C/xampp/htdocs/file-hosting-website/public/html/css/modal_window.css",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/compare-accounts-table.php",
-		"/C/xampp/htdocs/file-hosting-website/private/php/compare-accounts-table-content.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/upload/storage.php",
 		"/C/xampp/htdocs/file-hosting-website/private/php/upload/upload-handler.php",
 		"/C/xampp/htdocs/file-hosting-website/private/config/config.php",
-		"/C/xampp/htdocs/file-hosting-website/private/php/account-data.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/user/constraints/download/get.php",
 		"/C/xampp/htdocs/file-hosting-website/public/resources/routes/api/file/download.php",
 		"/C/xampp/htdocs/file-hosting-website/private/templates/download/file-found.php",
@@ -724,11 +732,7 @@
 		"/C/xampp/htdocs/file_upload/private/php/db-connect.php",
 		"/C/xampp/htdocs/file_upload/public/html/js/config/user_data.js",
 		"/C/xampp/htdocs/file_upload/public/html/js/config/account_data.js",
-		"/C/xampp/htdocs/file_upload/private/config/upload.php",
-		"/C/xampp/htdocs/file_upload/public/resources/routes/api/user/constraints/get.php",
-		"/C/xampp/htdocs/file_upload/public/html/js/config/failed_request.js",
-		"/C/xampp/htdocs/file_upload/public/html/js/config/config.js",
-		"/C/xampp/htdocs/file_upload/private/config/database.php"
+		"/C/xampp/htdocs/file_upload/private/config/upload.php"
 	],
 	"find":
 	{
@@ -746,6 +750,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"surname",
+			"private",
+			"assertIsInteger",
+			"maxFileSize",
+			"contraints",
+			"maxFileSize",
+			"maxNum",
+			"maxSpeed",
+			"uploadConstraintsArrayHasKeys",
+			"download",
+			"downloadConstraintsArrayHasKeys",
 			"fff",
 			"activeUploadBtnRing1",
 			"activeUploadBtnRing2",
@@ -862,18 +877,7 @@
 			"usedAllDownloadsAlert",
 			"font",
 			"filename",
-			"success",
-			"UndefinedTemplateContentVar",
-			"MoveUploadedFileException",
-			"phpPaths",
-			"white",
-			"maxFileSize",
-			"minutes",
-			"MAX_NUM_DURATION",
-			"top",
-			"liggray",
-			"lightgray",
-			"compareAccountsTable"
+			"success"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -892,71 +896,104 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/html/index.php",
+					"file": "private/php/download.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3703,
+						"buffer_size": 3290,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1841,
-								1841
+								1134,
+								1134
 							]
 						],
 						"settings":
 						{
-							"SL.13.region_keys":
-							[
-							],
-							"SL.15.region_keys":
-							[
-							],
-							"SL.38.region_keys":
+							"SL.41.region_keys":
 							[
 							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 638.0,
+						"translation.y": 158.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "private/php/signup-validation.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1339,
+								1339
+							]
+						],
+						"settings":
+						{
+							"SL.46.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 487.333333333,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "public/html/css/index/upload_button.css",
-					"semi_transient": false,
+					"buffer": 2,
+					"file": "private/php/login.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 923,
+						"buffer_size": 1306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								492,
-								492
+								556,
+								556
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"SL.56.region_keys":
+							[
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 218.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1017,6 +1054,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"validatio",
+				"private\\php\\signup-validation.php"
+			],
+			[
+				"val",
+				"public\\resources\\routes\\api\\user\\login\\validate.php"
+			],
 			[
 				"databa",
 				"private\\config\\database.php"
@@ -1520,14 +1565,6 @@
 			[
 				"data/acc",
 				"public\\html\\js\\data\\account.js"
-			],
-			[
-				"data/us",
-				"public\\html\\js\\data\\user.js"
-			],
-			[
-				"index.php",
-				"public\\html\\pages\\index.php"
 			]
 		],
 		"width": 0.0
