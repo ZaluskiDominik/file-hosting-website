@@ -69,11 +69,11 @@ class AccountData
 	private function formatUploadConstraints(array $accountStmt)
 	{
 		$this->uploadConstraints['maxFileSize'] = 
-			$accountStmt['max_upload_file_size'] * GB;
+			(float)$accountStmt['max_upload_file_size'] * GB;
 		
 		$this->uploadConstraints['maxNum'] = $accountStmt['max_num_uploads'];
 		
 		$this->uploadConstraints['maxStorageSize'] = 
-			$accountStmt['max_storage_size'] * GB;		
+			(float)$accountStmt['max_storage_size'] * GB;		
 	}
 }
